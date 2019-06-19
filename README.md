@@ -2,6 +2,10 @@
 
 [https://www.udemy.com/nodejs-master-class/learn/lecture/9990086](https://www.udemy.com/nodejs-master-class/learn/lecture/9990086)
 
+The tutorial leaves each section with an excercise to build your own video store app called Vidley. None of that was clearly
+mentioned in the begining of the tutorial. Here's someones repo for that codebase:
+[https://github.com/julianoalberto/vidly](https://github.com/julianoalberto/vidly)
+
 
 
 ## Routes
