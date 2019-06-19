@@ -4,13 +4,41 @@
    Promise Based Approach
    ========================================================================== */
 
-getUser(1)
-    .then(user => getRepositories(user.gitHubUsername))
-    .then(repos => getCommits(repos[0]))
-    .then(commits => console.log('commits', commits))
-    .catch(err => console.log('error', err.message));
+// console.log('before');
 
+// getUser(1)
+//     .then(user => getRepositories(user.gitHubUsername))
+//     .then(repos => getCommits(repos[0]))
+//     .then(commits => console.log('commits', commits))
+//     .catch(err => console.log('error', err.message));
 
+// console.log('after');
+
+/* ==========================================================================
+   Async and Await Approach
+   - need to use try/catch block to catch rejection error
+   ========================================================================== */
+console.log('before');
+
+async function displayCommits() {
+
+    try {
+        const user = await getUser(1);
+        // console.log('user', user);
+        const repos = await getRepositories(user.gitHubUsername);
+        // console.log('repos', repos);
+        const commits = await getCommits(repos[0]);
+        console.log('commits', commits);
+    }
+    catch (err) {
+        console.log('Error: ', err.message);
+    }
+
+}
+
+displayCommits();
+
+console.log('after');
 
 
 /* ==========================================================================
@@ -65,7 +93,9 @@ getUser(1)
 
 // console.log('after');
 
-// functions
+/* ==========================================================================
+   The Functions Used for Demo
+   ========================================================================== */
 
 function getUser(id, callback) {
 
@@ -90,23 +120,13 @@ function getRepositories(username, callback) {
         setTimeout(() => {
 
             console.log('retrieving list of repositories...');
-            resolve(['repo1', 'repo2', 'repo3']);
+            // resolve(['repo1', 'repo2', 'repo3']);
+            reject(new Error('Could not get repos'));
 
         }, 2000);
 
     });
 
-
-}
-
-function displayCommits(commits) {
-
-    setTimeout(() => {
-
-        console.log('retrieving list of repo commits...');
-        callback(['commit1', 'commit2', 'commit3']);
-
-    });
 
 }
 
