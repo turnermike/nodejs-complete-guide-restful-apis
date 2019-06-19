@@ -48,14 +48,14 @@ async function createCourse() {
 async function getCourses() {
 
     const courses = await Course
-        // .find({ isPublished: true })                     // comparison operator
-        // .find({ price: { $gte: 10, $lte: 100 } })        // comparison operators
-        // .find({ price: { $in: [10, 15, 20] } })          // comparison operators
-        // .find()
-        // .find({ author: /^Mosh/ })                          // starts with "Mosh" case sensitive
-        // .find({ author: /turner$/i })                           // ends with "Turner" case insensiive
-        .find({ author: /.*urne.*/ })                       // contains "urne"
-        // .or([ { author: 'Mosh' }, { isPublished: true } ])  // .or() logical operator
+        // .find({ isPublished: true })                         // comparison operator
+        // .find({ price: { $gte: 10, $lte: 100 } })            // comparison operators
+        // .find({ price: { $in: [10, 15, 20] } })              // comparison operators
+        // .find()                                              // all
+        // .find({ author: /^Mosh/ })                           // starts with "Mosh" case sensitive
+        // .find({ author: /turner$/i })                        // ends with "Turner" case insensiive
+        .find({ author: /.*urne.*/ })                           // contains "urne"
+        // .or([ { author: 'Mosh' }, { isPublished: true } ])   // .or() logical operator
         // .and([])
         .limit(10)
         .sort({ name: 1 })
@@ -66,3 +66,6 @@ async function getCourses() {
 
 // createCourse();
 getCourses();
+
+
+
