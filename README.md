@@ -7,6 +7,21 @@ mentioned in the begining of the tutorial. Here's someones repo for that codebas
 [https://github.com/julianoalberto/vidly](https://github.com/julianoalberto/vidly)
 
 
+## Environment Variables
+
+### PORT
+Use the following to set locally on Mac:
+`export PORT=5000`
+
+
+## Debugging
+
+Using the NPM debug utility for logging messages.
+[https://www.npmjs.com/package/debug](https://www.npmjs.com/package/debug)
+
+Set an environment variable for each debug namespace:
+`export DEBUG=app:startup,app:db`
+
 
 ## Routes
 
@@ -18,8 +33,5 @@ Query string parameters used for additional data or optional data to back end se
 
 
 
-## Environment Variables
 
-Use the following to set locally on Mac:
-`export PORT=5000`
 
