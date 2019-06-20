@@ -36,8 +36,10 @@ async function getCourses() {
     return await Course
         .find({ isPublished: true })
         .find({ tags: { $in: ['backend', 'frontend'] } })
-        .sort({ price: -1})
-        .select({ name: 1, author: 1})
+        // .sort({ price: -1})
+        .sort('-price')
+        // .select({ name: 1, author: 1})
+        .select('name author price');
 
     // console.log('courses', courses);
 
