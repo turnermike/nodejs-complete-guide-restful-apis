@@ -47,19 +47,26 @@ async function createCourse() {
 
 async function getCourses() {
 
+    const pageNumber = 2;
+    const pageSize = 10;
+    // /api/courses?pageNumber=2&pageSize=10
+
     const courses = await Course
-        // .find({ isPublished: true })                         // comparison operator
+        .find({ isPublished: true })                            // comparison operator
         // .find({ price: { $gte: 10, $lte: 100 } })            // comparison operators
         // .find({ price: { $in: [10, 15, 20] } })              // comparison operators
         // .find()                                              // all
         // .find({ author: /^Mosh/ })                           // starts with "Mosh" case sensitive
         // .find({ author: /turner$/i })                        // ends with "Turner" case insensiive
-        .find({ author: /.*urne.*/ })                           // contains "urne"
+        // .find({ author: /.*urne.*/ })                        // contains "urne"
         // .or([ { author: 'Mosh' }, { isPublished: true } ])   // .or() logical operator
         // .and([])
-        .limit(10)
+        .skip((pageNumber -1) * pageSize)                       // use .skip() and .limit() to configure pagination
+        .limit(pageSize)
+        // .limit(10)                                           // max qty to return
         .sort({ name: 1 })
         .select({ name: 1, author: 1, tags: 1 })
+        // .count();                                            // count results
     console.log('courses', courses);
 
 }

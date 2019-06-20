@@ -6,6 +6,8 @@ The tutorial leaves each section with an excercise to build your own video store
 mentioned in the begining of the tutorial. Here's someones repo for that codebase:
 [https://github.com/julianoalberto/vidly](https://github.com/julianoalberto/vidly)
 
+Some other student's repo:
+[https://github.com/Devansh4/nodeCourse](https://github.com/Devansh4/nodeCourse)
 
 ## Environment Variables
 
