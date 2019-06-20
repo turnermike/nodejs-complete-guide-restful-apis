@@ -6,6 +6,7 @@ const dbDebug = require('debug')('app:db');
 
 const app = express();
 
+// dev environment stuff
 if(app.get('env') === 'development') {
     console.log('Is development environment.');
     app.use(morgan('tiny'));
@@ -18,33 +19,71 @@ mongoose.connect('mongodb://localhost/node-restful-api', { useNewUrlParser: true
 
 // initialize a mongoose schema
 const courseSchema = new mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+        required: true,
+        minlength: 5,
+        maxlength: 255,
+        // match: /pattern/
+    },                                                      // validation example for required
+    category: {
+        type: String,
+        required: true,
+        enum: ['web', 'mobile', 'network']                  // value must be one of these
+    },
     author: String,
     tags: [ String ],
     date: { type: Date, default: Date.now },
-    isPublished: Boolean
+    isPublished: Boolean,
+    price: {
+        type: Number,
+        required: function() { return this.isPublished }, // conditional required validation
+        min: 10,
+        max: 200
+    }
 });
 
 // compile schema into a model which provides a class
-const Course = mongoose.model('Course', courseSchema);
-// save to mongodb via mongoose save
 // returns a promise
+const Course = mongoose.model('Course', courseSchema);
 
+/**
+ * Insert
+ *
+ * Add/create a new document.
+ *
+ */
 async function createCourse() {
 
     // create object based off of Course class
     const course = new Course({
-        name: 'PHP Course',
-        author: 'Mike',
-        tags: ['php', 'backend'],
-        isPublished: true
+        name: 'C# Course',
+        // name: '',                           // use this to test validation
+        category: 'mobile',
+        author: 'Chuck',
+        tags: ['c#', 'backend'],
+        isPublished: true,
+        price: 25
     });
 
-    const result = await course.save();
-    console.log('result', result);
+    // use try/catch block to catch the promise rejection
+    try{
+        // await course.validate();          // manual validation
+        const result = await course.save();
+        console.log('result', result);
+    }
+    catch(err) {
+        console.log('Error: ', err.message);
+    }
 
 }
 
+/**
+ * Select
+ *
+ * Get records with various filtering examples.
+ *
+ */
 async function getCourses() {
 
     const pageNumber = 2;
@@ -72,9 +111,12 @@ async function getCourses() {
 }
 
 /**
+ * Update
+ *
  * Update a document if a query is required first.
  * For example, need to check if it's published first or if it exists.
- **/
+ *
+ */
 async function updateCourseQueryFirst(id) {
 
     const course = await Course.findById(id);
@@ -92,6 +134,13 @@ async function updateCourseQueryFirst(id) {
 
 }
 
+/**
+ * Update
+ *
+ * Update a document first and return the document.
+ * Good to use when we don't need to query the updated record first.
+ *
+ */
 async function updateCourseUpdateFirst(id) {
 
     const result = await Course.findByIdAndUpdate(id, {
@@ -105,24 +154,32 @@ async function updateCourseUpdateFirst(id) {
 
 }
 
+/**
+ * Delete
+ *
+ * Remove a document.
+ * Return a result object or the deleted document. Both examples provided.
+ *
+ */
 async function removeCourse(id) {
 
     // const result = await Course.deleteOne({ _id: id });     // returns a result object
     const result = await Course.findByIdAndRemove(id);          // returns the deleted document
-
-
     console.log('result', result);
 
 }
 
 
 
-
-// createCourse();
+/**
+ * Run
+ *
+ */
+createCourse();
 // getCourses();
 // updateCourseQueryFirst('5d0a88c8aa9fdf25284dc340');
 // updateCourseUpdateFirst('5d0a88c8aa9fdf25284dc340');
-removeCourse('5d0bd6129bc1817af7583132');
+// removeCourse('5d0bd6129bc1817af7583132');
 
 
 
