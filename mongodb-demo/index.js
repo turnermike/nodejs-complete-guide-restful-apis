@@ -12,7 +12,7 @@ if(app.get('env') === 'development') {
 }
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/node-restful-api')
+mongoose.connect('mongodb://localhost/node-restful-api', { useNewUrlParser: true, useFindAndModify: false })
     .then( () => dbDebug('Connected to MongoDB'))
     .catch(err => console.log('Error: ', err));
 
@@ -34,9 +34,9 @@ async function createCourse() {
 
     // create object based off of Course class
     const course = new Course({
-        name: 'Angular Course',
-        author: 'Mosh',
-        tags: ['angular', 'frontend'],
+        name: 'PHP Course',
+        author: 'Mike',
+        tags: ['php', 'backend'],
         isPublished: true
     });
 
@@ -71,8 +71,58 @@ async function getCourses() {
 
 }
 
+/**
+ * Update a document if a query is required first.
+ * For example, need to check if it's published first or if it exists.
+ **/
+async function updateCourseQueryFirst(id) {
+
+    const course = await Course.findById(id);
+
+    if (!course) return; // course does not exist
+
+    if(course.isPublished) return; // don't update published posts
+
+    course.isPublished = true;
+    course.author = 'Bruce Lee';
+
+    const result = await course.save();
+
+    console.log('result', result);
+
+}
+
+async function updateCourseUpdateFirst(id) {
+
+    const result = await Course.findByIdAndUpdate(id, {
+        $set: {
+            author: 'Mad Max',
+            isPublished: false
+        }
+    }, { new: true });
+
+    console.log('result', result);
+
+}
+
+async function removeCourse(id) {
+
+    // const result = await Course.deleteOne({ _id: id });     // returns a result object
+    const result = await Course.findByIdAndRemove(id);          // returns the deleted document
+
+
+    console.log('result', result);
+
+}
+
+
+
+
 // createCourse();
-getCourses();
+// getCourses();
+// updateCourseQueryFirst('5d0a88c8aa9fdf25284dc340');
+// updateCourseUpdateFirst('5d0a88c8aa9fdf25284dc340');
+removeCourse('5d0bd6129bc1817af7583132');
 
 
 
