@@ -49,19 +49,24 @@ async function createCourse() {
 
 async function getCourses() {
 
-    const courses = await Course
+    return await Course
         .find({ isPublished: true, tags: 'backend' })
         // .find({ tags: { $in: ['backend'] } })
         .sort({ name: 1})
         .select({ name: 1, author: 1})
 
-    console.log('courses', courses);
+    // console.log('courses', courses);
 
 }
 
 // createCourse();
 
-getCourses();
+async function run() {
+    const courses = await getCourses();
+    console.log('courses', courses);
+}
+
+run();
 
 
 
