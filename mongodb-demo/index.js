@@ -13,8 +13,8 @@ if(app.get('env') === 'development') {
 }
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/node-restful-api', { useNewUrlParser: true, useFindAndModify: false })
-    .then( () => dbDebug('Connected to MongoDB'))
+mongoose.connect('mongodb://localhost/mongo-exercises', { useNewUrlParser: true, useFindAndModify: false })
+    .then( () => console.log('Connected to MongoDB'))
     .catch(err => console.log('Error: ', err));
 
 // initialize a mongoose schema
@@ -32,7 +32,15 @@ const courseSchema = new mongoose.Schema({
         enum: ['web', 'mobile', 'network']                  // value must be one of these
     },
     author: String,
-    tags: [ String ],
+    tags: {
+        type: Array,
+        validate: {
+            validator: function (v) {
+                return v && v.length > 0;
+            },
+            message: 'A course should have at least one tag'
+        }
+    },
     date: { type: Date, default: Date.now },
     isPublished: Boolean,
     price: {
@@ -57,11 +65,12 @@ async function createCourse() {
 
     // create object based off of Course class
     const course = new Course({
-        name: 'C# Course',
+        name: 'PHP Course',
         // name: '',                           // use this to test validation
-        category: 'mobile',
+        category: 'web',
         author: 'Chuck',
-        tags: ['c#', 'backend'],
+        tags: ['php', 'backend'],
+        // tags: [],
         isPublished: true,
         price: 25
     });
