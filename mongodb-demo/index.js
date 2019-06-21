@@ -29,17 +29,30 @@ const courseSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['web', 'mobile', 'network']                  // value must be one of these
+        enum: ['web', 'mobile', 'network'],                  // value must be one of these
+        lowercase: true,
+        // uppercase: true,
+        trim: true
     },
     author: String,
     tags: {
         type: Array,
-        validate: {
-            validator: function (v) {
-                return v && v.length > 0;
-            },
-            message: 'A course should have at least one tag'
-        }
+        // Asyncronous Validator
+        validate: function(v) {
+            return new Promise(function(resolve, reject) {
+                setTimeout(() => {
+                    const result = v && v.length > 0;
+                    resolve(result);
+                }, 4000);
+            });
+        },
+        // Standard Syncronous Validator
+        // validate: {
+        //     validator: function (v) {
+        //         return v && v.length > 0;
+        //     },
+        //     message: 'A course should have at least one tag'
+        // }
     },
     date: { type: Date, default: Date.now },
     isPublished: Boolean,
@@ -47,7 +60,9 @@ const courseSchema = new mongoose.Schema({
         type: Number,
         required: function() { return this.isPublished }, // conditional required validation
         min: 10,
-        max: 200
+        max: 200,
+        get: v => Math.round(v),
+        // set: v => Math.round(v)
     }
 });
 
@@ -65,14 +80,14 @@ async function createCourse() {
 
     // create object based off of Course class
     const course = new Course({
-        name: 'PHP Course',
+        name: 'Python Course',
         // name: '',                           // use this to test validation
-        category: 'web',
-        author: 'Chuck',
-        tags: ['php', 'backend'],
+        category: 'Web',
+        author: 'Billy',
+        tags: ['python', 'backend'],
         // tags: [],
         isPublished: true,
-        price: 25
+        price: 21.99
     });
 
     // use try/catch block to catch the promise rejection
@@ -81,8 +96,13 @@ async function createCourse() {
         const result = await course.save();
         console.log('result', result);
     }
-    catch(err) {
-        console.log('Error: ', err.message);
+    catch(ex) {
+        // console.log('Error: ', ex.message);
+
+        for(field in ex.errors) {
+            // console.log('field', field);
+            console.log('Error field: ', ex.errors[field].message);
+        }
     }
 
 }
@@ -100,7 +120,8 @@ async function getCourses() {
     // /api/courses?pageNumber=2&pageSize=10
 
     const courses = await Course
-        .find({ isPublished: true })                            // comparison operator
+        .find({ _id: '5d0ce3a9912cae9cf8f2f7ba' })
+        // .find({ isPublished: true })                            // comparison operator
         // .find({ price: { $gte: 10, $lte: 100 } })            // comparison operators
         // .find({ price: { $in: [10, 15, 20] } })              // comparison operators
         // .find()                                              // all
@@ -109,11 +130,11 @@ async function getCourses() {
         // .find({ author: /.*urne.*/ })                        // contains "urne"
         // .or([ { author: 'Mosh' }, { isPublished: true } ])   // .or() logical operator
         // .and([])
-        .skip((pageNumber -1) * pageSize)                       // use .skip() and .limit() to configure pagination
-        .limit(pageSize)
+        // .skip((pageNumber -1) * pageSize)                       // use .skip() and .limit() to configure pagination
+        // .limit(pageSize)
         // .limit(10)                                           // max qty to return
         .sort({ name: 1 })
-        .select({ name: 1, author: 1, tags: 1 })
+        .select({ name: 1, author: 1, tags: 1, price: 1 })
         // .count();                                            // count results
     console.log('courses', courses);
 
@@ -184,8 +205,8 @@ async function removeCourse(id) {
  * Run
  *
  */
-createCourse();
-// getCourses();
+// createCourse();
+getCourses();
 // updateCourseQueryFirst('5d0a88c8aa9fdf25284dc340');
 // updateCourseUpdateFirst('5d0a88c8aa9fdf25284dc340');
 // removeCourse('5d0bd6129bc1817af7583132');
