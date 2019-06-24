@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ObjectID = require('mongodb').ObjectID;
 
 mongoose.connect('mongodb://localhost/playground', { useNewUrlParser: true })
   .then(() => console.log('Connected to MongoDB...'))
@@ -14,26 +15,41 @@ const Author = mongoose.model('Author', authorSchema);
 
 const Course = mongoose.model('Course', new mongoose.Schema({
   name: String,
-  // author: authorSchema
-  author: {
-    type: authorSchema,
-    required: true
+  // author: {
+  //   type: authorSchema,
+  //   required: true
+  // }
+  authors: {
+    type: [authorSchema]
   }
 }));
 
-async function createCourse(name, author) {
+/**
+ * Create a new course
+ *
+ */
+// async function createCourse(name, author) {
+async function createCourse(name, authors) {
+
   const course = new Course({
     name,
-    author
+    authors
   });
 
   const result = await course.save();
   console.log(result);
+
 }
 
+/**
+ * List all courses
+ *
+ */
 async function listCourses() {
+
   const courses = await Course.find();
   console.log(courses);
+
 }
 
 /**
@@ -70,8 +86,48 @@ async function removeAuthor(courseId)  {
 
 }
 
-// createCourse('PHP Course', new Author({ name: 'Mike Turner' }));
 
-// updateAuthor('5d1125faf7eed31c1f664eca');
+async function addAuthor(courseId, author) {
 
-removeAuthor('5d1125faf7eed31c1f664eca');
+  const course = await Course.findById(new ObjectID(courseId), (err, course) => {
+
+    if (err) {
+        console.log('Error: \n', err.message);
+        return;
+    }
+
+    course.authors.push(author);
+    course.save();
+
+    console.log('addAuthor saved: ', course);
+
+  });
+
+}
+
+
+
+
+
+
+
+
+// listCourses();
+
+// createCourse('ASP Course', new Author({ name: 'Frank King' }));   // single sub document
+// createCourse('XML Course', [                                        // array of sub documents
+//   new Author({ name: 'Brand Hienze' }),
+//   new Author({ name: 'Maggie Hutton' })
+// ]);
+
+// updateAuthor('5d1136f091d06d2eb08f276b');
+
+// removeAuthor('5d1125faf7eed31c1f664eca');
+
+addAuthor('5d1141d54fbf2438b24056ae', new Author({ name: 'Yo Mom' }) );
+
+
+
+
+
+
