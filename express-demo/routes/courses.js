@@ -80,7 +80,9 @@ const Course = mongoose.model('Course', courseSchema);
 // get all courses
 router.get('/', (req, res) => {
 
-    res.send(courses);
+
+
+    // res.send(courses);
 
 });
 
@@ -116,34 +118,17 @@ router.post('/', (req, res) => {
         price: req.query.price
     });
 
+    const result = course.save();   // .save() returns a promise
 
-
-    // try{
-
-        const result = course.save();   // .save() returns a promise
-
-        result
-            .then(result => {
-                debug('New course added: \n', result);
-                res.send(result);
-            })
-            .catch(err => {
-                console.log('error', err.errors);
-                res.send(err.errors);
-            });
-
-        // res.send({});
-
-    // }
-    // catch(ex) {
-    //     let returnMessage;
-    //     for(field in ex.errors) {
-    //         console.log('Error field: ', ex.errors[field].message);
-    //         returnMessage += ex.errors[field].message + '\n';
-    //     }
-    //     res.send(ex.errors);
-    // }
-
+    result
+        .then(result => {
+            debug('New course added: \n', result);
+            res.send(result);
+        })
+        .catch(err => {
+            console.log('error', err.errors);
+            res.send(err.errors);
+        });
 
     // const { error } = validateCourse(req.body);
 
