@@ -7,6 +7,7 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+const ObjectID = require('mongodb').ObjectID;
 const debug = require('debug')('app:db');
 const morgan = require('morgan');
 const Joi = require('joi');
@@ -74,28 +75,46 @@ const courseSchema = new mongoose.Schema({
 const Course = mongoose.model('Course', courseSchema);
 
 /**
- * Routes
+ * Routes (/api/courses)
  */
 
 // get all courses
 router.get('/', async (req, res) => {
 
     const allCourses = await Course.find();
+    debug('All courses requested: \n', allCourses)
     res.send(allCourses);
 
+    /**
+     * Before Mongoose, using static object as data source
+     */
     // res.send(courses);
 
 });
 
 // get course by id
-router.get('/:id', (req, res) => {
-    // res.send(req.params);
-    // res.send(req.query);
+router.get('/:id', async (req, res) => {
 
-    const course = courses.find(c => c.id === parseInt(req.params.id));
-    if (!course) return res.status(404).send('The course with the given ID was not found.');
+    const course = await Course.findById(new ObjectID(req.params.id), (err, course) => {
 
-    res.send(course);
+        if (err) {
+            debug('Error: \n', err.message);
+            res.send({ 'error': err.message });
+            return;
+        }
+
+        debug('Get course by ID: \n', course);
+        res.send(course);
+
+    });
+
+    /**
+     * Before Mongoose, using static object as data source
+     */
+    // const course = courses.find(c => c.id === parseInt(req.params.id));
+    // if (!course) return res.status(404).send('The course with the given ID was not found.');
+
+    // res.send(course);
 
 });
 
@@ -127,10 +146,13 @@ router.post('/', (req, res) => {
             res.send(result);
         })
         .catch(err => {
-            console.log('error', err.errors);
+            debug('Insert error: \n', err.errors);
             res.send(err.errors);
         });
 
+    /**
+     * Before Mongoose, using static object as data source
+     */
     // const { error } = validateCourse(req.body);
 
     // if ( error ) return res.status(400).send(error.details[0].message);
@@ -151,39 +173,100 @@ router.post('/', (req, res) => {
 // update a course
 router.put('/:id', (req, res) => {
 
-    const course = courses.find(c => c.id === parseInt(req.params.id));
-    if (!course) return res.status(404).send('The course with the given ID was not found.');
+    const query = { _id: new ObjectID(req.params.id) };
 
-    const { error } = validateCourse(req.body);
+    // trim any spaces after the comma in comma seperated tags
+    let tags = [];
+    req.query.tags.split(',').map(el => { tags.push(el.trim()); });
+    // console.log('tags', tags);
+
+    const newData = {
+        name: req.query.name,
+        category: req.query.category,
+        author: req.query.author,
+        tags,
+        price: req.query.price
+    };
+
+    const options = { upsert: true };
+
+    const { error } = validateCourse(newData);
     if ( error ) return res.status(400).send(error.details[0].message);
 
-    course.name = req.body.name;
+    const result = Course.updateOne(query, newData, options).exec();
 
-    res.send(course);
+    result
+        .then(result => {
+            debug('Updated course: \n', result);
+            res.send(req.params);
+        })
+        .catch(err => {
+            debug('Update error: \n', err);
+            res.send(err);
+        });
+
+
+    /**
+     * Before Mongoose, using static object as data source
+     */
+    // const course = courses.find(c => c.id === parseInt(req.params.id));
+    // if (!course) return res.status(404).send('The course with the given ID was not found.');
+
+    // const { error } = validateCourse(req.body);
+    // if ( error ) return res.status(400).send(error.details[0].message);
+
+    // course.name = req.body.name;
+
+    // res.send(course);
 
 });
 
 // delete course by id
 router.delete('/:id', (req, res) => {
 
+    Course.deleteOne({ _id: new ObjectID(req.params.id)}, (err, result) => {
 
-    console.log('current courses', courses);
+        if (err) {
+            debug('Error: ', err);
+            res.status(400).send(err.details[0].message);
+        }
 
-    const course = courses.find(c => c.id === parseInt(req.params.id));
-    if (!course) return res.status(404).send('The course with the given ID was not found.');
+        debug('Deleted course: ', result);
 
-    const index = courses.indexOf(course);
-    courses.splice(index, 1);
+        if(result.deletedCount){
+            res.send(result);
+        }else{
+            res.status(400).send(`No record found with the ID: ${req.params.id}`);
+        }
 
-    console.log('new courses after delete: ', courses);
-    res.send(course);
+    });
+
+    /**
+     * Before Mongoose, using static object as data source
+     */
+    // console.log('current courses', courses);
+
+    // const course = courses.find(c => c.id === parseInt(req.params.id));
+    // if (!course) return res.status(404).send('The course with the given ID was not found.');
+
+    // const index = courses.indexOf(course);
+    // courses.splice(index, 1);
+
+    // console.log('new courses after delete: ', courses);
+    // res.send(course);
 
 });
 
 function validateCourse(course) {
 
+    // debug('validateCourse', course)
+
     const schema = {
-        name: Joi.string().min(3).required()
+        name: Joi.string().required(),
+        category: Joi.string().required(),
+        author: Joi.string().required(),
+        tags:Joi.array().required(),
+        price: Joi.number().required()
     };
 
     return Joi.validate(course, schema);
