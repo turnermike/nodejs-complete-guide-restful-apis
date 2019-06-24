@@ -24,8 +24,9 @@ app.use('/', home);                                 // use home router object fo
 
 // output app info
 console.log(`Application Name: ${config.get('name')}`);
-console.log(`Mail Host: ${config.get('mail.host')}`);
-console.log(`Mail Password: ${config.get('mail.password')}`);
+console.log(`MongoDB URL: ${config.get('mongodb')}`);
+// console.log(`Mail Host: ${config.get('mail.host')}`);
+// console.log(`Mail Password: ${config.get('mail.password')}`);
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log('app.get("env"):', app.get('env'));
 
@@ -37,10 +38,9 @@ if (app.get('env') === 'development'){
 }
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/node-restful-api', { useNewUrlParser: true, useFindAndModify: false })
+mongoose.connect(config.get('mongodb'), { useNewUrlParser: true, useFindAndModify: false })
     .then( () => debug('Connected to MongoDB'))
     .catch(err => debug('Error: ', err));
-
 
 // start server
 app.listen(port, () => { console.log(`Listening on port ${port}`) });

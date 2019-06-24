@@ -1,7 +1,8 @@
 {
-    "name": "My Express App - Development",
-    "mail": {
-        "host": "dev-mail-server",
-        "password": "mypassword"
-    }
+    "name": "Vidly - Development",
+    "mongodb": "mongodb://localhost/node-restful-api",
+    // "mail": {
+    //     "host": "dev-mail-server",
+    //     "password": "mypassword"
+    // }
 }
