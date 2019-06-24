@@ -87,6 +87,10 @@ async function removeAuthor(courseId)  {
 }
 
 
+/**
+ * Add a new sub document
+ *
+ */
 async function addAuthor(courseId, author) {
 
   const course = await Course.findById(new ObjectID(courseId), (err, course) => {
