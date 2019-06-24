@@ -5,43 +5,14 @@
  *
  */
 
+const { Customers, validate } = require('../models/customers');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
 const debug = require('debug')('app:db');
 const morgan = require('morgan');
-const Joi = require('joi');
+// const Joi = require('joi');
 const router = express.Router();
-
-// // connect to mongodb
-// mongoose.connect('mongodb://localhost/node-restful-api', { useNewUrlParser: true, useFindAndModify: false })
-//     .then( () => debug('Connected to MongoDB'))
-//     .catch(err => debug('Error: ', err));
-
-// initialize genre collection schema
-const Customers = mongoose.model(
-    'Customers',
-    new mongoose.Schema({
-        name: {
-            type: String,
-            required: true,
-            minlength: [2, 'Name must have at least 2 characters'],
-            maxlength: [255, 'Name must have a maximum of 255 characters'],
-            trim: true
-        },
-        isGold: {
-            type: Boolean,
-            default: false
-        },
-        phone: {
-            type: String,
-            required: true,
-            minlength: [2, 'Name must have at least 2 characters'],
-            maxlength: [255, 'Name must have a maximum of 255 characters'],
-            trim: true
-        }
-    })
-);
 
 /**
  * Routes (/api/courses)
@@ -80,7 +51,7 @@ router.get('/:id', async (req, res) => {
 // add new customer
 router.post('/', (req, res) => {
 
-    const { error } = validateCustomers(req.body);
+    const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
     let customer = new Customers({
@@ -107,7 +78,7 @@ router.post('/', (req, res) => {
 router.put('/:id', async (req, res) => {
 
     // validate
-    const { error } = validateCustomers(req.body);
+    const { error } = validate(req.body);
     if (error ) return res.status(400).send(error.details[0].message);
 
     // find/update
@@ -151,19 +122,5 @@ router.delete('/:id', async (req, res) => {
     }
 
 });
-
-function validateCustomers(customer) {
-
-    // debug('validateCustomers', customer);
-
-    const schema = {
-        name: Joi.string().min(2).max(255).required(),
-        phone: Joi.string().min(2).max(255).required(),
-        isGold: Joi.boolean()
-    };
-
-    return Joi.validate(customer, schema);
-
-}
 
 module.exports = router;
