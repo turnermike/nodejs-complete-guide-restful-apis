@@ -78,9 +78,10 @@ const Course = mongoose.model('Course', courseSchema);
  */
 
 // get all courses
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
 
-
+    const allCourses = await Course.find();
+    res.send(allCourses);
 
     // res.send(courses);
 
