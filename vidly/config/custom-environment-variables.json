@@ -1,0 +1,11 @@
+/**
+ * This file uses the 'config' package to map environment variables to this object.
+ *
+ */
+
+{
+    "name": "My Express App - Development",
+    "mail": {
+        "password": "app_password"
+    }
+}
