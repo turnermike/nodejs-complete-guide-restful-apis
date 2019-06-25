@@ -22,22 +22,7 @@ const genresSchema = new mongoose.Schema({
 // model
 const Genres = mongoose.model('Genres', genresSchema);
 
-
-
-// // initialize genre collection schema
-// const Genres = mongoose.model(
-//     'Genres',
-//     new mongoose.Schema({
-//         name: {
-//             type: String,
-//             required: true,
-//             minlength: [2, 'Name must have at least 2 characters'],
-//             maxlength: [255, 'Name must have a maximum of 255 characters'],
-//             trim: true,
-//         },
-//     })
-// );
-
+// validation
 function validateGenres(genre) {
 
     // debug('validateGenres', genre);

@@ -21,8 +21,8 @@ const Movies = mongoose.model(
             trim: true
         },
         genre: {
-            // type: genresSchema,
-            type: String,
+            type: genresSchema,
+            // type: String,
             required: true
         },
         numberInStock: {
