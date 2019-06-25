@@ -71,7 +71,7 @@ async function updateAuthor(courseId) {
 }
 
 /**
- * Remove a sub document
+ * Remove a single sub document
  *
  */
 async function removeAuthor(courseId)  {
@@ -128,7 +128,7 @@ async function addAuthor(courseId, author) {
 
 // removeAuthor('5d1125faf7eed31c1f664eca');
 
-addAuthor('5d1141d54fbf2438b24056ae', new Author({ name: 'Yo Mom' }) );
+addAuthor('5d1141d54fbf2438b24056ae', new Author({ name: 'Jeff' }) );
 
 
 
