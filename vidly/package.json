@@ -18,6 +18,8 @@
     "helmet": "^3.18.0",
     "joi": "^14.3.1",
     "joi-objectid": "^2.0.0",
+    "joi-password-complexity": "^2.0.1",
+    "lodash": "^4.17.11",
     "mongoose": "^5.6.0",
     "morgan": "^1.9.1",
     "pug": "^2.0.4"
