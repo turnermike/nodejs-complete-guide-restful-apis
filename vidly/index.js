@@ -60,5 +60,7 @@ mongoose.connect(config.get('mongodb'), { useNewUrlParser: true, useFindAndModif
     .then( () => debug('Connected to MongoDB'))
     .catch(err => debug('Error: ', err));
 
+mongoose.set('useCreateIndex', true);
+
 // start server
 app.listen(port, () => { console.log(`Listening on port ${port}`) });

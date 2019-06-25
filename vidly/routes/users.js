@@ -24,28 +24,28 @@ const router = express.Router();
 // get all users
 router.get('/', async (req, res) => {
 
-    const allGenres = await Genres.find();
+    const allUsers = await Users.find();
 
-    debug('All users requested: \n', allGenres);
-    res.send(allGenres);
+    debug('All users requested: \n', allUsers);
+    res.send(allUsers);
 
 });
 
-// get genre by id
+// get user by id
 router.get('/:id', async (req, res) => {
 
-    const genre = await Genres.findById(
+    const user = await Users.findById(
         { _id: new ObjectID(req.params.id) },
-        (err, genre) => {
+        (err, user) => {
             if (err) {
                 debug('Error: \n', err.message);
                 // res.send({ error: err.message });
-                res.status(404).send(`The genre with that ID ('${req.params.id}') does not exist.`);
+                res.status(404).send(`The user with that ID ('${req.params.id}') does not exist.`);
                 return;
             }
 
-            debug('Get genre by ID: \n', genre);
-            res.send(genre);
+            debug('Get user by ID: \n', user);
+            res.send(user);
         }
     );
 
