@@ -1,8 +1,5 @@
 {
     "name": "Vidly - Development",
     "mongodb": "mongodb://localhost/node-restful-api",
-    // "mail": {
-    //     "host": "dev-mail-server",
-    //     "password": "mypassword"
-    // }
+    "jwtPrivateKey": "vidly_jwtPrivateKey"
 }

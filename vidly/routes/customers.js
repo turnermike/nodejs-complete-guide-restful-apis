@@ -11,7 +11,6 @@ const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
 const debug = require('debug')('app:db');
 const morgan = require('morgan');
-// const Joi = require('joi');
 const router = express.Router();
 
 /**

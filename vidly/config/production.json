@@ -1,6 +1,5 @@
 {
     "name": "My Express App - Production",
-    "mail": {
-        "host": "production-mail-server"
-    }
+    "mongodb": "",
+    "jwtPrivateKey": "vidly_jwtPrivateKey"
 }

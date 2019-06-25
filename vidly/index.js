@@ -14,6 +14,7 @@ const customers = require('./routes/customers');    // customers router
 const movies = require('./routes/movies');          // movies router
 const rentals = require('./routes/rentals');        // rentals router
 const users = require('./routes/users');            // users router
+const auth = require('./routes/auth');              // auth router
 const home = require('./routes/home');              // default/base router
 const port = process.env.PORT || 3000;
 
@@ -31,13 +32,13 @@ app.use('/api/genres', genres);                     // use the genres router obj
 app.use('/api/movies', movies);                     // use the movies router object for any routes starting with /api/movies
 app.use('/api/rentals', rentals);                   // use the rentals router object for any routes starting with /api/rentals
 app.use('/api/users', users);                       // use the users router object for any routes starting with /api/users
+app.use('/api/auth', auth);                         // use the auth router object for any routes starting with /api/auth
 app.use('/', home);                                 // use home router object for any routes starting with /
 
 // output app info
 console.log(`Application Name: ${config.get('name')}`);
 console.log(`MongoDB URL: ${config.get('mongodb')}`);
-// console.log(`Mail Host: ${config.get('mail.host')}`);
-// console.log(`Mail Password: ${config.get('mail.password')}`);
+console.log(`jwtPrivateKey: ${config.get('jwtPrivateKey')}`);
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 console.log('app.get("env"):', app.get('env'));
 
@@ -46,6 +47,12 @@ if (app.get('env') === 'development'){
     app.use(morgan('tiny'));                            // logs requests to terminal
     debug('Morgan enabled...');
     app.use(logger);                                    // example of a custom middleware
+}
+
+// check for JWT token
+if (! config.get('jwtPrivateKey') || config.get('jwtPrivateKey') == '') {
+    debug('Error: ', 'jwtPrivateKey is not defined');
+    process.exit(1);
 }
 
 // connect to mongodb

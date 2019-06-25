@@ -5,7 +5,6 @@
 
 {
     "name": "My Express App - Development",
-    "mail": {
-        "password": "app_password"
-    }
+    "mongodb": "",
+    "jwtPrivateKey": ""
 }
