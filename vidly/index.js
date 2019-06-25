@@ -8,6 +8,7 @@ const logger = require('./middleware/logger');      // middleware
 // const courses = require('./routes/courses');        // course router
 const genres = require('./routes/genres');          // genres router
 const customers = require('./routes/customers');    // customers router
+const movies = require('./routes/movies');          // movies router
 const home = require('./routes/home');              // default/base router
 const port = process.env.PORT || 3000;
 
@@ -22,6 +23,7 @@ app.use(helmet());                                  // helps secure http headers
 // app.use('/api/courses', courses);                   // use the courses router object for any routes starting with /api/courses
 app.use('/api/customers', customers);               // use the customs router object for any routes starting with /api/customers
 app.use('/api/genres', genres);                     // use the genres router object for any routes starting with /api/genres
+app.use('/api/movies', movies);                     // use the movies router object for any routes starting with /api/movies
 app.use('/', home);                                 // use home router object for any routes starting with /
 
 // output app info
