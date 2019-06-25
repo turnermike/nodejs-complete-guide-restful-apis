@@ -34,6 +34,17 @@ Query string parameters used for additional data or optional data to back end se
 ```/api/posts/2018/02?sorBy=name```
 
 
+## NPM Packages
+Some notes or referrence for NPM packages used.
+
+### Fawn
+[https://github.com/e-oj/Fawn](https://github.com/e-oj/Fawn)
+A promise based library for transactions in MongoDB
+
+Since this tutorial, transactions have been added to MongoDB as per Fawn README.
+
+The library creates a database collection named `ojlinttaskcollections` to run the phase 2 commits.
+
 
 
 

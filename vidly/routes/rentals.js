@@ -10,9 +10,12 @@ const { Movies } = require('../models/movies');
 const { Customers } = require('../models/customers');
 const express = require('express');
 const mongoose = require('mongoose');
+const Fawn = require('fawn');
 const ObjectID = require('mongodb').ObjectID;
 const debug = require('debug')('app:db');
 const router = express.Router();
+
+Fawn.init(mongoose);
 
 /**
  * Routes (/api/rentals)
@@ -57,7 +60,9 @@ router.get('/:id', async (req, res) => {
 /**
  * Add new rental
  *
- * inserts a sub document for the genre field
+ * - inserts a sub document for the genre field
+ * - using Fawn to handle multiple transactions:
+ * https://github.com/e-oj/Fawn
  *
  */
 router.post('/', async (req, res) => {
@@ -75,6 +80,7 @@ router.post('/', async (req, res) => {
 
     if(movie.numberInStock <= 0) return res.status(400).send('Movie not in stock');
 
+    // add new rental document
     let rental = new Rentals({
         customer: {
             _id: customer._id,
@@ -88,61 +94,29 @@ router.post('/', async (req, res) => {
         }
     });
 
-    rental = await rental.save();
+    try{
 
-    // adjust inventory
-    movie.numberInStock--;
-    movie.save();
+        new Fawn.Task()
+            .save('rentals', rental)
+            .update('movies', { _id: movie._id }, {
+                $inc: { numberInStock: -1 }
+            })
+            .run();
+
+    }
+    catch(err) {
+        res.status(500).send('Something failed');
+    }
+
+
+    // rental = await rental.save();
+
+    // // adjust inventory
+    // movie.numberInStock--;
+    // movie.save();
 
     debug('Rental added: \n', rental);
     res.send(rental);
-
-
-
-    // try{
-
-    //     // const genre = Genres.findById(new ObjectID(req.body.genre), (err, genre) => {
-    //     const genre = Genres.findById({ _id: req.body.genre }, (err, genre) => {
-
-    //         if(err) {
-    //             debug('Error: \n', err.message);
-    //             return;
-    //         }
-
-    //         // validate genre id
-    //         if(! genre) return res.status(400).send('Invalid genre ID');
-
-    //         let movie = new Movies({
-    //             title: req.body.title,
-    //             // genre,                   // the whole genre document
-    //             genre: {                    // selected fields
-    //                 _id: genre._id,
-    //                 name: genre.name
-    //             },
-    //             numberInStock: req.body.numberInStock,
-    //             dailyRentalRate: req.body.dailyRentalRate
-    //         });
-
-    //         const result = movie.save(); // .save() returns a promise
-
-    //         result
-    //             .then(result => {
-    //                 debug('New movie added: \n', result);
-    //                 res.send(result);
-    //             })
-    //             .catch(err => {
-    //                 debug('Insert movie error: \n', err.errors);
-    //                 res.send(err.errors);
-    //         });
-
-    //     });
-
-    // }
-    // catch(err) {
-
-    //     res.send(err.message);
-
-    // }
 
 });
 
