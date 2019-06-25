@@ -64,36 +64,50 @@ router.post('/', (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
-    const genre = Genres.findById(new ObjectID(req.body.genre), (err, genre) => {
+    try{
 
-        if(err) {
-            debug('Error: \n', err.message);
-            return;
-        }
+        // const genre = Genres.findById(new ObjectID(req.body.genre), (err, genre) => {
+        const genre = Genres.findById({ _id: req.body.genre }, (err, genre) => {
 
-        // console.log('genre', genre);
+            if(err) {
+                debug('Error: \n', err.message);
+                return;
+            }
 
-        let movie = new Movies({
-            title: req.body.title,
-            // genre: req.body.genre,
-            genre,
-            numberInStock: req.body.numberInStock,
-            dailyRentalRate: req.body.dailyRentalRate
+            // validate genre id
+            if(! genre) return res.status(400).send('Invalid genre ID');
+
+            let movie = new Movies({
+                title: req.body.title,
+                // genre,                   // the whole genre document
+                genre: {                    // selected fields
+                    _id: genre._id,
+                    name: genre.name
+                },
+                numberInStock: req.body.numberInStock,
+                dailyRentalRate: req.body.dailyRentalRate
+            });
+
+            const result = movie.save(); // .save() returns a promise
+
+            result
+                .then(result => {
+                    debug('New movie added: \n', result);
+                    res.send(result);
+                })
+                .catch(err => {
+                    debug('Insert movie error: \n', err.errors);
+                    res.send(err.errors);
+            });
+
         });
 
-        const result = movie.save(); // .save() returns a promise
+    }
+    catch(err) {
 
-        result
-            .then(result => {
-                debug('New movie added: \n', result);
-                res.send(result);
-            })
-            .catch(err => {
-                debug('Insert movie error: \n', err.errors);
-                res.send(err.errors);
-        });
+        res.send(err.message);
 
-    });
+    }
 
 });
 
@@ -109,8 +123,9 @@ router.put('/:id', async (req, res) => {
 
     // get the genre document
     const genre = await Genres.findById(new ObjectID(req.body.genre));
-    console.log('genre', genre);
-    // res.send(genre);
+    // console.log('genre', genre);
+
+    if(! genre) return res.status(400).send('Invalid genre ID');
 
     // find/update
     try{
@@ -119,7 +134,11 @@ router.put('/:id', async (req, res) => {
             { _id: new ObjectID(req.params.id) },
             {
                 title: req.body.title,
-                genre,
+                // genre,                   // the whole genre document
+                genre: {                    // selected fields
+                    _id: genre._id,
+                    name: genre.name
+                },
                 numberInStock: req.body.numberInStock,
                 dailyRentalRate: req.body.dailyRentalRate
             },
@@ -133,7 +152,6 @@ router.put('/:id', async (req, res) => {
         debug('Update movie error: ', err.message);
         res.send(err.message);
     }
-
 
 });
 
