@@ -1,8 +1,11 @@
 const express = require('express');
+const ObjectID = require('mongodb').ObjectID;
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const config = require('config');
+const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
 const debug = require('debug')('app:startup');      // requires env var: export DEBUG=app:startup,app:db
 const logger = require('./middleware/logger');      // middleware
 // const courses = require('./routes/courses');        // course router

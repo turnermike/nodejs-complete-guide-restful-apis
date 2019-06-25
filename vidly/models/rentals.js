@@ -6,7 +6,8 @@
  */
 
 const mongoose = require('mongoose');
-const Joi = require('joi');
+// const Joi = require('joi');
+// Joi.objectId = require('joi-objectid')(Joi);
 
 // initialize customers collection schema
 const Rentals = mongoose.model(
@@ -72,8 +73,8 @@ function validateRentals(rental) {
     // debug('validateRentals', rental);
 
     const schema = {
-        customerId: Joi.string().required(),
-        movieId: Joi.string().required()
+        customerId: Joi.objectId().required(),
+        movieId: Joi.objectId().required()
     };
 
     return Joi.validate(rental, schema);

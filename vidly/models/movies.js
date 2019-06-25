@@ -46,7 +46,7 @@ function validateMovies(movie) {
 
     const schema = {
         title: Joi.string().min(2).max(255).required(),
-        genre: Joi.string().required(),
+        genre: Joi.objectId().required(),
         numberInStock: Joi.number().min(0).max(255).required(),
         dailyRentalRate: Joi.number().min(0).max(255).required()
     };
