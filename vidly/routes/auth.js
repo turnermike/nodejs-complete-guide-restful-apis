@@ -36,37 +36,37 @@ const passwordComplexityOptions = {
  * Routes (/api/users)
  */
 
-// get all users
-router.get('/', async (req, res) => {
+// // get all users
+// router.get('/', async (req, res) => {
 
-    const allGenres = await Genres.find();
+//     const allGenres = await Genres.find();
 
-    debug('All users requested: \n', allGenres);
-    res.send(allGenres);
+//     debug('All users requested: \n', allGenres);
+//     res.send(allGenres);
 
-});
+// });
 
-// get genre by id
-router.get('/:id', async (req, res) => {
+// // get genre by id
+// router.get('/:id', async (req, res) => {
 
-    const genre = await Genres.findById(
-        { _id: new ObjectID(req.params.id) },
-        (err, genre) => {
-            if (err) {
-                debug('Error: \n', err.message);
-                // res.send({ error: err.message });
-                res.status(404).send(`The genre with that ID ('${req.params.id}') does not exist.`);
-                return;
-            }
+//     const genre = await Genres.findById(
+//         { _id: new ObjectID(req.params.id) },
+//         (err, genre) => {
+//             if (err) {
+//                 debug('Error: \n', err.message);
+//                 // res.send({ error: err.message });
+//                 res.status(404).send(`The genre with that ID ('${req.params.id}') does not exist.`);
+//                 return;
+//             }
 
-            debug('Get genre by ID: \n', genre);
-            res.send(genre);
-        }
-    );
+//             debug('Get genre by ID: \n', genre);
+//             res.send(genre);
+//         }
+//     );
 
-});
+// });
 
-// add new user
+// login/authenticate user
 router.post('/', async (req, res) => {
 
     // validate
