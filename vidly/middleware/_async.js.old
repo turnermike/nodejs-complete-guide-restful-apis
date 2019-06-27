@@ -1,0 +1,26 @@
+/**
+ * NOT IN USE: Curently using express-async-errors npm package
+ *
+ * middleware/async.js
+ *
+ * - using a try catch block for all routes using this middleware
+ * - passing express route handler async function referrence as parameter
+ * - returns a standard express route handler
+ *
+ */
+module.exports = function (handler) {
+
+    return async (req, res, next) => {
+
+        try {
+
+            await handler(req, res);
+
+        }
+        catch(ex) {
+            next(ex);
+        }
+
+    }
+
+}

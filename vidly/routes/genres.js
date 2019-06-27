@@ -8,6 +8,7 @@
 const { Genres, validate } = require ('../models/genres');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
+// const asyncMiddleware = require('../middleware/async');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
@@ -21,7 +22,7 @@ const router = express.Router();
  */
 
 // get all genres
-router.get('/', async (req, res) => {
+router.get('/', async (req, res, next) => {
 
     const allGenres = await Genres.find();
 
@@ -63,15 +64,17 @@ router.post('/', auth, (req, res) => {
 
     const result = genre.save(); // .save() returns a promise
 
-    result
-        .then(result => {
-            debug('New genre added: \n', result);
-            res.send(result);
-        })
-        .catch(err => {
-            debug('Insert error: \n', err.errors);
-            res.send(err.errors);
-        });
+    res.send(genre);
+
+    // result
+    //     .then(result => {
+    //         debug('New genre added: \n', result);
+    //         res.send(result);
+    //     })
+    //     .catch(err => {
+    //         debug('Insert error: \n', err.errors);
+    //         res.send(err.errors);
+    //     });
 
 });
 

@@ -51,6 +51,9 @@ Query string parameters used for additional data or optional data to back end se
 ## NPM Packages
 Some notes or referrence for NPM packages used.
 
+### Express Async Errors
+
+
 ### jsonwebtoken
 [https://github.com/auth0/node-jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
 Use JsonWebToken with node.js.

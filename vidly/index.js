@@ -6,8 +6,10 @@ const morgan = require('morgan');
 const config = require('config');
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
+require('express-async-errors');
 const debug = require('debug')('app:startup');      // requires env var: export DEBUG=app:startup,app:db
 const logger = require('./middleware/logger');      // middleware
+const error = require('./middleware/error');        // error handling middleware
 // const courses = require('./routes/courses');        // course router
 const genres = require('./routes/genres');          // genres router
 const customers = require('./routes/customers');    // customers router
@@ -34,6 +36,7 @@ app.use('/api/rentals', rentals);                   // use the rentals router ob
 app.use('/api/users', users);                       // use the users router object for any routes starting with /api/users
 app.use('/api/auth', auth);                         // use the auth router object for any routes starting with /api/auth
 app.use('/', home);                                 // use home router object for any routes starting with /
+app.use(error);                                     // use error handling middleware
 
 // output app info
 console.log(`Application Name: ${config.get('name')}`);
