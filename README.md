@@ -51,8 +51,14 @@ Query string parameters used for additional data or optional data to back end se
 ## NPM Packages
 Some notes or referrence for NPM packages used.
 
-### Express Async Errors
+### Winston
+[https://github.com/winstonjs/winston](https://github.com/winstonjs/winston)
+Using `winston` to log errors to MongoDB.
 
+### Express Async Errors
+[https://github.com/davidbanham/express-async-errors](https://github.com/davidbanham/express-async-errors)
+Using the `express-async-errors` package to automatically wrap routes in a middleware to
+catch async exceptions. Was previously using middleware/async.js in tutorial.
 
 ### jsonwebtoken
 [https://github.com/auth0/node-jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)

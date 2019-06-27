@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const config = require('config');
+const winston = require('winston');
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 require('express-async-errors');
@@ -20,8 +21,13 @@ const auth = require('./routes/auth');              // auth router
 const home = require('./routes/home');              // default/base router
 const port = process.env.PORT || 3000;
 
-// initialize middelware
+// express
 const app = express();
+
+// winston/error logging config
+winston.add(new winston.transports.File({ filename: './logs/errors.log' }));
+
+// initialize middelware
 app.set('view engine', 'pug');                      // pug templating engine
 app.set('views', './views');                        // template location (views is default)
 app.use(express.json());                            // use express.json middleware in request processing pipeline

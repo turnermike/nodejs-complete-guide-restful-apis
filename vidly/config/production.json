@@ -1,5 +1,6 @@
 {
     "name": "My Express App - Production",
     "mongodb": "",
-    "jwtPrivateKey": "vidly_jwtPrivateKey"
+    "jwtPrivateKey": "vidly_jwtPrivateKey",
+    "errorLogToFile": true
 }
