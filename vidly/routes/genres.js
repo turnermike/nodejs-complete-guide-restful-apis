@@ -7,6 +7,7 @@
 
 const { Genres, validate } = require ('../models/genres');
 const auth = require('../middleware/auth');
+const admin = require('../middleware/admin');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
@@ -100,7 +101,7 @@ router.put('/:id', auth, async (req, res) => {
 });
 
 // delete genre by id
-router.delete('/:id', auth, async (req, res) => {
+router.delete('/:id', [auth, admin], async (req, res) => {
 
     try{
 

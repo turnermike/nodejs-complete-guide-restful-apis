@@ -45,6 +45,10 @@ Since this tutorial, transactions have been added to MongoDB as per Fawn README.
 
 The library creates a database collection named `ojlinttaskcollections` to run the phase 2 commits.
 
-
+## Response Codes
+200 All Good
+401 Unauthorized (failed login/unauthenticated)
+403 Forbidden (unauthorized/not permitted to access)
+404 Not Available
 
 

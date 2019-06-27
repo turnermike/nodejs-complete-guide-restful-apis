@@ -1,3 +1,8 @@
+/**
+ * middleware/logger.js
+ *
+ *
+ */
 
 function log(req, res, next) {
     console.log('logging...');

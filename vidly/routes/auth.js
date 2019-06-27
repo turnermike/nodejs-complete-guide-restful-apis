@@ -2,6 +2,7 @@
  * routes/auth.js
  *
  * - handle all /api/auth routes (loaded via index.js with path prefix)
+ * - no logout functionality, needs to be handled on client side by deleting the JWT
  *
  */
 
