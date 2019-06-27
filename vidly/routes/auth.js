@@ -21,8 +21,6 @@ const bcrypt = require('bcrypt');
 const router = express.Router();
 
 // passwordX1$
-
-
 const passwordComplexityOptions = {
     min: 5,
     max: 255,
@@ -34,38 +32,8 @@ const passwordComplexityOptions = {
 };
 
 /**
- * Routes (/api/users)
+ * Routes (/api/auth)
  */
-
-// // get all users
-// router.get('/', async (req, res) => {
-
-//     const allGenres = await Genres.find();
-
-//     debug('All users requested: \n', allGenres);
-//     res.send(allGenres);
-
-// });
-
-// // get genre by id
-// router.get('/:id', async (req, res) => {
-
-//     const genre = await Genres.findById(
-//         { _id: new ObjectID(req.params.id) },
-//         (err, genre) => {
-//             if (err) {
-//                 debug('Error: \n', err.message);
-//                 // res.send({ error: err.message });
-//                 res.status(404).send(`The genre with that ID ('${req.params.id}') does not exist.`);
-//                 return;
-//             }
-
-//             debug('Get genre by ID: \n', genre);
-//             res.send(genre);
-//         }
-//     );
-
-// });
 
 // login/authenticate user
 router.post('/', async (req, res) => {
@@ -83,9 +51,9 @@ router.post('/', async (req, res) => {
 
     const token = user.generateAuthToken();
 
-    res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email']));           // use _.pick to select with properties to send
-    // res.send(token);
-
+    // res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email', 'isAdmin']));           // use _.pick to select with properties to send
+    res.header('x-auth-token', token).send(token);
+    // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDEyNzY2YTc5NTgzODBkZmE5NWQzYmIiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE1NjE2NDgzNTN9.JjU67jcZDm5GU8rDhCH2nuRo3nXdBysD2QAg8cxEuqw
 
 });
 

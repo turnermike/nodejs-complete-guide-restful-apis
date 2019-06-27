@@ -11,9 +11,23 @@ Some other student's repo:
 
 ## Environment Variables
 
+### NODE_ENV
+Set the environment variable (development/staging/production).
+`export NODE_ENV=development`
+
 ### PORT
 Use the following to set locally on Mac:
 `export PORT=5000`
+
+### DEBUG
+Used with the `debug` NPM package for logging messages to console.
+`export DEBUG=startup.app,debug.app`
+
+
+## Authentication
+A JSON Web Token (JWT) is generated after auth (/api/auth). If the isAdmin value for a
+user is updated in the database. A new JWT will need to be generated to reflect that
+change in the isAdmin setting encoded with the JWT.
 
 
 ## Debugging
@@ -37,6 +51,10 @@ Query string parameters used for additional data or optional data to back end se
 ## NPM Packages
 Some notes or referrence for NPM packages used.
 
+### jsonwebtoken
+[https://github.com/auth0/node-jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+Use JsonWebToken with node.js.
+
 ### Fawn
 [https://github.com/e-oj/Fawn](https://github.com/e-oj/Fawn)
 A promise based library for transactions in MongoDB
@@ -45,8 +63,10 @@ Since this tutorial, transactions have been added to MongoDB as per Fawn README.
 
 The library creates a database collection named `ojlinttaskcollections` to run the phase 2 commits.
 
+
 ## Response Codes
 200 All Good
+400 Bad Request
 401 Unauthorized (failed login/unauthenticated)
 403 Forbidden (unauthorized/not permitted to access)
 404 Not Available

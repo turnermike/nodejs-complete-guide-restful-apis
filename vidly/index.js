@@ -59,7 +59,6 @@ if (! config.get('jwtPrivateKey') || config.get('jwtPrivateKey') == '') {
 mongoose.connect(config.get('mongodb'), { useNewUrlParser: true, useFindAndModify: false })
     .then( () => debug('Connected to MongoDB'))
     .catch(err => debug('Error: ', err));
-
 mongoose.set('useCreateIndex', true);
 
 // start server
