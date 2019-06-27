@@ -6,6 +6,7 @@
  */
 
 const { Users, validate } = require ('../models/users');
+const auth = require('../middleware/auth');
 const _ = require('lodash');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -22,6 +23,14 @@ const router = express.Router();
 /**
  * Routes (/api/users)
  */
+
+// get current user
+router.get('/me', auth, async (req, res) => {
+
+    const user = await Users.findById(req.user._id).select('-password');
+    res.send(user);
+
+});
 
 // get all users
 router.get('/', async (req, res) => {
