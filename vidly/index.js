@@ -25,9 +25,35 @@ const port = process.env.PORT || 3000;
 // express
 const app = express();
 
-// winston/error logging config
+// // log any express uncaught exceptions
+// process.on('uncaughtException', (ex) => {
+//     debug('We got an uncaught exception, logged via winston.');
+//     winston.error(ex.message);
+//     process.exit(1);
+// })
+
+winston.handleExceptions(
+    // debug('Weve got an unhandled exception');
+    new winston.transports.File({ filename: './logs/errors.log' }),
+    new winston.transports.MongoDB({ db: config.get('mongodb') })
+);
+
+// log any unhangled promise rejections
+process.on('unhandledRejection', (ex) => {
+
+    // debug('We got an unhandled promise rejection, logged via winston');
+    // winston.error(ex.message);
+    // process.exit(1);
+    throw ex;
+});
+
+
+// winston/error logging config (used to catch exceptions with express request processing pipeline)
 if (config.get('errorLogToFile')) winston.add(new winston.transports.File({ filename: './logs/errors.log' }));
 if (config.get('errorLogToDB')) winston.add(new winston.transports.MongoDB({ db: config.get('mongodb') }));
+
+// throw new Error('Something failed durring startup');
+const p = Promise.reject(new Error('Something failed!!!'));
 
 // initialize middelware
 app.set('view engine', 'pug');                      // pug templating engine
