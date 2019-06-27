@@ -6,6 +6,7 @@
  */
 
 const { Customers, validate } = require('../models/customers');
+const auth = require('../middleware/auth');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
@@ -18,7 +19,7 @@ const router = express.Router();
  */
 
 // get all customers
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
 
     const allCustomers = await Customers.find();
 
@@ -28,7 +29,7 @@ router.get('/', async (req, res) => {
 });
 
 // get customer by id
-router.get('/:id', async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
 
     const customers = await Customers.findById(
         { _id: new ObjectID(req.params.id) },
@@ -48,7 +49,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // add new customer
-router.post('/', (req, res) => {
+router.post('/', auth, (req, res) => {
 
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
@@ -74,7 +75,7 @@ router.post('/', (req, res) => {
 });
 
 // update a customer
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
 
     // validate
     const { error } = validate(req.body);
@@ -104,7 +105,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // delete customer by id
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
 
     try{
 

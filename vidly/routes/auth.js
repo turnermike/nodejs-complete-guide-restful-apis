@@ -15,8 +15,8 @@ const morgan = require('morgan');
 const Joi = require('joi');
 const PasswordComplexity = require('joi-password-complexity');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const config = require('config');
+// const jwt = require('jsonwebtoken');
+// const config = require('config');
 const router = express.Router();
 
 // passwordX1$
@@ -80,27 +80,11 @@ router.post('/', async (req, res) => {
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if (! validPassword) return res.status(400).send('Invalid email or password');
 
-    const token = jwt.sign({ _id: user._id }, config.get('jwtPrivateKey'));
+    const token = user.generateAuthToken();
 
-    res.send(token);
+    res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email']));           // use _.pick to select with properties to send
+    // res.send(token);
 
-
-    // // reset user object with new data
-    // user = new Users(_.pick(req.body, ['name', 'email', 'password']));
-    // // hash password
-    // const salt = await bcrypt.genSalt(10);
-    // user.password = await bcrypt.hash(user.password, salt);
-
-    // // user = new Users({
-    // //     name: req.body.name,
-    // //     email: req.body.email,
-    // //     password: req.body.password
-    // // });
-
-    // await user.save();
-
-    // // use _.pick to select with properties to send
-    // res.send(_.pick(user, ['_id', 'name', 'email']));
 
 });
 

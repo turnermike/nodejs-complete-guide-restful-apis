@@ -6,6 +6,7 @@
  */
 
 const { Genres, validate } = require ('../models/genres');
+const auth = require('../middleware/auth');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
@@ -49,14 +50,14 @@ router.get('/:id', async (req, res) => {
 });
 
 // add new genre
-router.post('/', (req, res) => {
+router.post('/', auth, (req, res) => {
 
     const { error } = validate(req.body);
 
     if (error) return res.status(400).send(error.details[0].message);
 
     const genre = new Genres({
-        name: req.query.name,
+        name: req.body.name,
     });
 
     const result = genre.save(); // .save() returns a promise
@@ -74,7 +75,7 @@ router.post('/', (req, res) => {
 });
 
 // update a genre
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
 
     // validate
     const { error } = validate(req.body);
@@ -99,7 +100,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // delete genre by id
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
 
     try{
 
