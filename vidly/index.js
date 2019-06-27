@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const config = require('config');
 const winston = require('winston');
+require('winston-mongodb');
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 require('express-async-errors');
@@ -25,7 +26,8 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 // winston/error logging config
-winston.add(new winston.transports.File({ filename: './logs/errors.log' }));
+if (config.get('errorLogToFile')) winston.add(new winston.transports.File({ filename: './logs/errors.log' }));
+if (config.get('errorLogToDB')) winston.add(new winston.transports.MongoDB({ db: config.get('mongodb') }));
 
 // initialize middelware
 app.set('view engine', 'pug');                      // pug templating engine
