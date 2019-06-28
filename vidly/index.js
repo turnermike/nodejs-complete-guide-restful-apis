@@ -1,16 +1,15 @@
-const express = require('express');
+ const express = require('express');
 const ObjectID = require('mongodb').ObjectID;
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const config = require('config');
-const winston = require('winston');
-require('winston-mongodb');
+const logger = require('./config/winston');         // using custom config file to initialize winston
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 require('express-async-errors');
 const debug = require('debug')('app:startup');      // requires env var: export DEBUG=app:startup,app:db
-const logger = require('./middleware/logger');      // middleware
+// const logger = require('./middleware/logger');      // middleware
 const error = require('./middleware/error');        // error handling middleware
 // const courses = require('./routes/courses');        // course router
 const genres = require('./routes/genres');          // genres router
@@ -25,39 +24,37 @@ const port = process.env.PORT || 3000;
 // express
 const app = express();
 
+// // logger test
+// logger.log({
+//   level: 'debug',
+//   message: 'Testing INFO log.',
+//   additional: { test1: 'hello', test2: 'goodbye' },
+//   // more: 'passed along'
+// });
 
-
-winston.handleExceptions(
-    // debug('Weve got an unhandled exception');
-    new winston.transports.File({ filename: './logs/errors.log' }),
-    new winston.transports.MongoDB({ db: config.get('mongodb') })
-);
-
-// // log any express uncaught exceptions
-// process.on('uncaughtException', (ex) => {
-//     debug('We got an uncaught exception, logged via winston.');
-//     winston.error(ex.message);
-//     process.exit(1);
-// })
+// log any express uncaught exceptions
+process.on('uncaughtException', (ex) => {
+    logger.log({
+        level: 'error',
+        message: ex.message
+    });
+    // process.exit(1);
+})
 
 // log any unhangled promise rejections
 process.on('unhandledRejection', (ex) => {
-
-    // debug('We got an unhandled promise rejection, logged via winston');
-    winston.error(ex.message);
-    // process.exit(1);
     throw ex;
 });
 
 
-// winston/error logging config (used to catch exceptions with express request processing pipeline)
-if (config.get('errorLogToFile')) winston.add(new winston.transports.File({ filename: './logs/errors.log' }));
-if (config.get('errorLogToDB')) winston.add(new winston.transports.MongoDB({ db: config.get('mongodb') }));
+// // winston/error logging config (used to catch exceptions with express request processing pipeline)
+// if (config.get('errorLogToFile')) winston.add(new winston.transports.File({ filename: './logs/errors.log' }));
+// if (config.get('errorLogToDB')) winston.add(new winston.transports.MongoDB({ db: config.get('mongodb') }));
 
 // thow an exception for testing
 // throw new Error('Delibertly thrown Exception for testing');
 // thow a promise rejection for testing
-const p = Promise.reject(new Error('Delibertly thrown Promise Rejection'));
+// const p = Promise.reject(new Error('Delibertly thrown Promise Rejection'));
 
 // initialize middelware
 app.set('view engine', 'pug');                      // pug templating engine
@@ -87,7 +84,7 @@ console.log('app.get("env"):', app.get('env'));
 if (app.get('env') === 'development'){
     app.use(morgan('tiny'));                            // logs requests to terminal
     debug('Morgan enabled...');
-    app.use(logger);                                    // example of a custom middleware
+    // app.use(logger);                                    // example of a custom middleware
 }
 
 // check for JWT token

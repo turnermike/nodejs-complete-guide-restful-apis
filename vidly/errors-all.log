@@ -1,0 +1,4 @@
+{"level":"info","message":"Testing INFO log.","additional":{"test1":"hello","test2":"goodbye"},"are":"passed along","timestamp":"2019-06-28 09:20:08"}
+{"level":"info","message":"Testing INFO log.","additional":{"test1":"hello","test2":"goodbye"},"are":"passed along","timestamp":"2019-06-28 09:21:19"}
+{"level":"info","message":"Testing INFO log.","additional":{"test1":"hello","test2":"goodbye"},"are":"passed along","service":"nodejs-complete-guide-restful-apis","timestamp":"2019-06-28 09:22:55"}
+{"level":"info","message":"Testing INFO log.","additional":{"test1":"hello","test2":"goodbye"},"are":"passed along","service":"nodejs-complete-guide-restful-apis","timestamp":"2019-06-28 09:23:37"}
