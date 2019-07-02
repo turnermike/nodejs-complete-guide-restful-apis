@@ -37,7 +37,8 @@ var options = {
         // format.colorize(),
         format.timestamp(),
         format.align(),
-        format.printf(info => `[${info.level}]: ${info.timestamp} ${info.message} ${JSON.stringify(info.additional)}`)
+        // format.printf(info => `[${info.level}]: ${info.timestamp} ${info.message} ${JSON.stringify(info.additional)}`)
+        format.printf(info => `[${info.level}]: ${info.timestamp} ${info.message}`)
         // format.splat(),
         // format.simple(),
         // format.json(),

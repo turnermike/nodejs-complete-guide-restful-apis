@@ -4,3 +4,577 @@
 [error]: 2019-07-02T14:16:14.671Z 	Could not get genres. undefined
 [error]: 2019-07-02T14:16:32.451Z 	Could not get genres. undefined
 [error]: 2019-07-02T14:16:39.144Z 	Could not get genres. undefined
+[error]: 2019-07-02T14:33:20.967Z 	uncaughtException: express is not defined
+ReferenceError: express is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:7:13)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:26:28)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T14:33:55.940Z 	uncaughtException: express is not defined
+ReferenceError: express is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:7:13)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:28)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T14:34:03.066Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:1:77)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:34:31.967Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:3:15)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:34:54.224Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:3:15)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:35:06.287Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:7:15)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:35:18.424Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:8:15)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:37:03.388Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:8:15)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:37:17.066Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:8:15)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:17:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:37:38.949Z 	uncaughtException: Cannot find module './middleware/error'
+Error: Cannot find module './middleware/error'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:8:15)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:15:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32) undefined
+[error]: 2019-07-02T14:38:22.949Z 	uncaughtException: helmet is not defined
+ReferenceError: helmet is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:22:9)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:15:28)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T14:38:53.257Z 	uncaughtException: helmet is not defined
+ReferenceError: helmet is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/routes.js:22:9)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:14:28)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T14:47:07.339Z 	Could not get genres. undefined
+[error]: 2019-07-02T15:04:05.242Z 	uncaughtException: winston is not defined
+ReferenceError: winston is not defined
+    at Server.app.listen (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:88:26)
+    at Object.onceWrapper (events.js:273:13)
+    at Server.emit (events.js:182:13)
+    at emitListeningNT (net.js:1320:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:744:11)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T15:04:05.243Z 	winston is not defined undefined
+[error]: 2019-07-02T15:04:27.222Z 	uncaughtException: Cannot create property 'Symbol(level)' on string 'Listening on port 3000'
+TypeError: Cannot create property 'Symbol(level)' on string 'Listening on port 3000'
+    at DerivedLogger.log (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/winston/lib/winston/logger.js:208:20)
+    at Object.winston.(anonymous function).args [as log] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/winston/lib/winston.js:110:68)
+    at Server.app.listen (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:89:34)
+    at Object.onceWrapper (events.js:273:13)
+    at Server.emit (events.js:182:13)
+    at emitListeningNT (net.js:1320:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:744:11)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T15:04:27.224Z 	Cannot create property 'Symbol(level)' on string 'Listening on port 3000' undefined
+[info]: 2019-07-02T15:05:30.957Z 	Listening on port 3000 undefined
+[info]: 2019-07-02T15:06:28.864Z 	Listening on port 3000 undefined
+[info]: 2019-07-02T15:06:40.372Z 	Listening on port 3000 undefined
+[info]: 2019-07-02T15:07:39.982Z 	Listening on port 3000 undefined
+[info]: 2019-07-02T15:07:50.088Z 	Listening on port 3000 undefined
+[error]: 2019-07-02T15:08:28.214Z 	uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/db.js:15:22)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:15:24)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[info]: 2019-07-02T15:08:55.878Z 	Listening on port 3000 undefined
+[error]: 2019-07-02T15:09:30.053Z 	uncaughtException: Cannot find module './middleware/logger'
+Error: Cannot find module './middleware/logger'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/db.js:10:16)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:15:1)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[info]: 2019-07-02T15:09:37.803Z 	Listening on port 3000 undefined
+[error]: 2019-07-02T15:09:37.850Z 	uncaughtException: winston is not defined
+ReferenceError: winston is not defined
+    at mongoose.connect.then (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/db.js:17:30)
+From previous event:
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/db.js:17:10)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:15:24)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T15:09:37.850Z 	winston is not defined undefined
+[info]: 2019-07-02T15:09:48.857Z 	Listening on port 3000 undefined
+[info]: 2019-07-02T15:09:48.886Z 	Connected to MongoDB undefined
+[info]: 2019-07-02T15:10:02.564Z 	Listening on port 3000 undefined
+[info]: 2019-07-02T15:10:02.595Z 	Connected to MongoDB undefined
+[info]: 2019-07-02T15:10:31.584Z 	Listening on port 3000
+[info]: 2019-07-02T15:10:31.615Z 	Connected to MongoDB
+[info]: 2019-07-02T15:12:08.245Z 	Listening on port 3000
+[info]: 2019-07-02T15:12:08.276Z 	Connected to MongoDB
+[info]: 2019-07-02T15:15:22.940Z 	Listening on port 3000
+[error]: 2019-07-02T15:15:22.961Z 	uncaughtException: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
+MongoNetworkError: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
+    at Pool.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/topologies/server.js:431:11)
+    at Pool.emit (events.js:182:13)
+    at connect (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/pool.js:557:14)
+    at makeConnection (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/connect.js:39:11)
+    at callback (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/connect.js:261:5)
+    at Socket.err (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/connect.js:286:7)
+    at Object.onceWrapper (events.js:273:13)
+    at Socket.emit (events.js:182:13)
+    at emitErrorNT (internal/streams/destroy.js:82:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+From previous event:
+    at NativeConnection.Connection.openUri (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/connection.js:593:19)
+    at Mongoose.connect (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/index.js:289:15)
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/db.js:16:14)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:15:24)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[error]: 2019-07-02T15:15:22.962Z 	failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
+[info]: 2019-07-02T15:17:10.042Z 	Listening on port 3000
+[error]: 2019-07-02T15:17:10.063Z 	uncaughtException: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
+MongoNetworkError: failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
+    at Pool.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/topologies/server.js:431:11)
+    at Pool.emit (events.js:182:13)
+    at connect (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/pool.js:557:14)
+    at makeConnection (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/connect.js:39:11)
+    at callback (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/connect.js:261:5)
+    at Socket.err (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongodb-core/lib/connection/connect.js:286:7)
+    at Object.onceWrapper (events.js:273:13)
+    at Socket.emit (events.js:182:13)
+    at emitErrorNT (internal/streams/destroy.js:82:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+From previous event:
+    at NativeConnection.Connection.openUri (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/connection.js:593:19)
+    at Mongoose.connect (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/index.js:289:15)
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/db.js:16:14)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:15:24)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[error]: 2019-07-02T15:17:10.064Z 	failed to connect to server [localhost:27017] on first connect [MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017]
+[info]: 2019-07-02T15:17:50.382Z 	Listening on port 3000
+[info]: 2019-07-02T15:17:50.412Z 	Connected to MongoDB
+[info]: 2019-07-02T15:19:03.646Z 	Listening on port 3000
+[info]: 2019-07-02T15:19:03.678Z 	Connected to MongoDB
+[info]: 2019-07-02T15:19:06.168Z 	Listening on port 3000
+[info]: 2019-07-02T15:19:06.199Z 	Connected to MongoDB
+[info]: 2019-07-02T15:19:28.446Z 	Listening on port 3000
+[info]: 2019-07-02T15:19:28.481Z 	Connected to MongoDB
+[info]: 2019-07-02T15:19:55.403Z 	Listening on port 3000
+[info]: 2019-07-02T15:19:55.433Z 	Connected to MongoDB
+[info]: 2019-07-02T15:20:18.840Z 	Listening on port 3000
+[info]: 2019-07-02T15:20:18.880Z 	Connected to MongoDB
+[info]: 2019-07-02T15:20:26.314Z 	Listening on port 3000
+[info]: 2019-07-02T15:20:26.353Z 	Connected to MongoDB
+[info]: 2019-07-02T15:20:35.323Z 	Listening on port 3000
+[info]: 2019-07-02T15:20:35.353Z 	Connected to MongoDB
+[info]: 2019-07-02T15:23:00.567Z 	Listening on port 3000
+[info]: 2019-07-02T15:23:00.607Z 	Connected to MongoDB
+[info]: 2019-07-02T15:23:35.148Z 	Listening on port 3000
+[info]: 2019-07-02T15:23:35.188Z 	Connected to MongoDB
+[info]: 2019-07-02T15:23:45.991Z 	Listening on port 3000
+[info]: 2019-07-02T15:23:46.026Z 	Connected to MongoDB
+[info]: 2019-07-02T15:23:51.095Z 	Listening on port 3000
+[info]: 2019-07-02T15:23:51.127Z 	Connected to MongoDB
+[info]: 2019-07-02T15:24:09.640Z 	Listening on port 3000
+[info]: 2019-07-02T15:24:09.679Z 	Connected to MongoDB
+[info]: 2019-07-02T15:24:17.977Z 	Listening on port 3000
+[info]: 2019-07-02T15:24:18.012Z 	Connected to MongoDB
+[info]: 2019-07-02T15:24:41.827Z 	Listening on port 3000
+[info]: 2019-07-02T15:24:41.862Z 	Connected to MongoDB
+[info]: 2019-07-02T15:25:13.354Z 	Listening on port 3000
+[info]: 2019-07-02T15:25:13.393Z 	Connected to MongoDB
+[info]: 2019-07-02T15:25:17.370Z 	Listening on port 3000
+[info]: 2019-07-02T15:25:17.401Z 	Connected to MongoDB
+[info]: 2019-07-02T15:26:02.100Z 	Listening on port 3000
+[info]: 2019-07-02T15:26:02.134Z 	Connected to MongoDB
+[info]: 2019-07-02T15:26:17.949Z 	Listening on port 3000
+[info]: 2019-07-02T15:26:17.980Z 	Connected to MongoDB
+[info]: 2019-07-02T15:26:20.889Z 	Listening on port 3000
+[info]: 2019-07-02T15:26:20.920Z 	Connected to MongoDB
+[error]: 2019-07-02T15:28:37.801Z 	uncaughtException: debug is not defined
+ReferenceError: debug is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/logging.js:34:9)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:14:29)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[error]: 2019-07-02T15:28:37.803Z 	debug is not defined
+[error]: 2019-07-02T15:29:06.268Z 	uncaughtException: debug is not defined
+ReferenceError: debug is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/logging.js:34:9)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:14:29)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[error]: 2019-07-02T15:29:06.270Z 	debug is not defined
+[error]: 2019-07-02T15:29:18.327Z 	uncaughtException: debug is not defined
+ReferenceError: debug is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/logging.js:34:9)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:14:29)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[error]: 2019-07-02T15:29:18.329Z 	debug is not defined
+[info]: 2019-07-02T15:29:26.743Z 	Morgan enabled...
+[info]: 2019-07-02T15:29:26.750Z 	Listening on port 3000
+[info]: 2019-07-02T15:29:26.782Z 	Connected to MongoDB
+[info]: 2019-07-02T15:29:49.339Z 	Morgan enabled...
+[info]: 2019-07-02T15:29:49.344Z 	Listening on port 3000
+[info]: 2019-07-02T15:29:49.382Z 	Connected to MongoDB
+[info]: 2019-07-02T15:30:28.804Z 	Morgan enabled...
+[info]: 2019-07-02T15:30:28.810Z 	Listening on port 3000
+[info]: 2019-07-02T15:30:28.844Z 	Connected to MongoDB
+[info]: 2019-07-02T15:30:56.421Z 	Morgan enabled...
+[info]: 2019-07-02T15:30:56.426Z 	Listening on port 3000
+[info]: 2019-07-02T15:30:56.459Z 	Connected to MongoDB
+[error]: 2019-07-02T15:31:09.715Z 	uncaughtException: config is not defined
+ReferenceError: config is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/logging.js:19:42)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:14:29)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[info]: 2019-07-02T15:31:29.998Z 	Morgan enabled...
+[info]: 2019-07-02T15:31:30.004Z 	Listening on port 3000
+[info]: 2019-07-02T15:31:30.042Z 	Connected to MongoDB
+[info]: 2019-07-02T15:32:00.831Z 	Morgan enabled...
+[info]: 2019-07-02T15:32:00.836Z 	Listening on port 3000
+[info]: 2019-07-02T15:32:00.869Z 	Connected to MongoDB
+[info]: 2019-07-02T15:32:05.957Z 	Morgan enabled...
+[info]: 2019-07-02T15:32:05.962Z 	Listening on port 3000
+[info]: 2019-07-02T15:32:05.996Z 	Connected to MongoDB
+[info]: 2019-07-02T15:32:17.405Z 	Morgan enabled...
+[info]: 2019-07-02T15:32:17.410Z 	Listening on port 3000
+[info]: 2019-07-02T15:32:17.443Z 	Connected to MongoDB
+[info]: 2019-07-02T15:32:30.103Z 	Morgan enabled...
+[info]: 2019-07-02T15:32:30.108Z 	Listening on port 3000
+[info]: 2019-07-02T15:32:30.146Z 	Connected to MongoDB
+[info]: 2019-07-02T15:35:10.774Z 	Morgan enabled...
+[info]: 2019-07-02T15:35:10.779Z 	Listening on port 3000
+[info]: 2019-07-02T15:35:10.808Z 	Connected to MongoDB
+[info]: 2019-07-02T15:35:43.155Z 	Morgan enabled...
+[info]: 2019-07-02T15:35:43.160Z 	Listening on port 3000
+[info]: 2019-07-02T15:35:43.192Z 	Connected to MongoDB
+[info]: 2019-07-02T15:35:53.945Z 	Morgan enabled...
+[info]: 2019-07-02T15:35:53.950Z 	Listening on port 3000
+[info]: 2019-07-02T15:35:53.983Z 	Connected to MongoDB
+[info]: 2019-07-02T15:36:28.554Z 	Morgan enabled...
+[info]: 2019-07-02T15:36:28.560Z 	Listening on port 3000
+[info]: 2019-07-02T15:36:28.600Z 	Connected to MongoDB
+[info]: 2019-07-02T15:36:32.615Z 	Morgan enabled...
+[info]: 2019-07-02T15:36:32.621Z 	Listening on port 3000
+[info]: 2019-07-02T15:36:32.655Z 	Connected to MongoDB
+[info]: 2019-07-02T15:36:47.795Z 	Morgan enabled...
+[info]: 2019-07-02T15:36:48.073Z 	Listening on port 3000
+[info]: 2019-07-02T15:36:48.115Z 	Connected to MongoDB
+[info]: 2019-07-02T15:39:38.543Z 	Morgan enabled...
+[info]: 2019-07-02T15:39:38.785Z 	Listening on port 3000
+[info]: 2019-07-02T15:39:38.818Z 	Connected to MongoDB
+[info]: 2019-07-02T15:46:14.861Z 	Morgan enabled...
+[info]: 2019-07-02T15:46:15.133Z 	Listening on port 3000
+[info]: 2019-07-02T15:46:15.167Z 	Connected to MongoDB
+[info]: 2019-07-02T15:46:31.925Z 	Morgan enabled...
+[info]: 2019-07-02T15:46:32.202Z 	Listening on port 3000
+[info]: 2019-07-02T15:46:32.236Z 	Connected to MongoDB
+[info]: 2019-07-02T15:46:46.497Z 	Morgan enabled...
+[info]: 2019-07-02T15:46:46.777Z 	Listening on port 3000
+[info]: 2019-07-02T15:46:46.812Z 	Connected to MongoDB
+[info]: 2019-07-02T15:46:56.981Z 	Morgan enabled...
+[info]: 2019-07-02T15:46:57.257Z 	Listening on port 3000
+[info]: 2019-07-02T15:46:57.292Z 	Connected to MongoDB
+[info]: 2019-07-02T15:47:02.330Z 	Morgan enabled...
+[info]: 2019-07-02T15:47:02.604Z 	Listening on port 3000
+[info]: 2019-07-02T15:47:02.639Z 	Connected to MongoDB
+[info]: 2019-07-02T15:47:40.230Z 	Morgan enabled...
+[info]: 2019-07-02T15:47:40.485Z 	Listening on port 3000
+[info]: 2019-07-02T15:47:40.519Z 	Connected to MongoDB
+[info]: 2019-07-02T15:48:11.184Z 	Morgan enabled...
+[info]: 2019-07-02T15:48:11.440Z 	Listening on port 3000
+[info]: 2019-07-02T15:48:11.472Z 	Connected to MongoDB
+[info]: 2019-07-02T15:50:21.810Z 	Morgan enabled...
+[info]: 2019-07-02T15:50:22.087Z 	Listening on port 3000
+[info]: 2019-07-02T15:50:22.125Z 	Connected to MongoDB
+[info]: 2019-07-02T15:50:29.310Z 	Morgan enabled...
+[info]: 2019-07-02T15:50:29.581Z 	Listening on port 3000
+[info]: 2019-07-02T15:50:29.616Z 	Connected to MongoDB
+[info]: 2019-07-02T15:51:25.426Z 	Morgan enabled...
+[info]: 2019-07-02T15:51:25.705Z 	Listening on port 3000
+[info]: 2019-07-02T15:51:25.742Z 	Connected to MongoDB
+[info]: 2019-07-02T15:51:47.327Z 	Morgan enabled...
+[info]: 2019-07-02T15:51:47.608Z 	Listening on port 3000
+[info]: 2019-07-02T15:51:47.643Z 	Connected to MongoDB
+[info]: 2019-07-02T15:52:05.928Z 	Morgan enabled...
+[info]: 2019-07-02T15:52:06.213Z 	Listening on port 3000
+[info]: 2019-07-02T15:52:06.247Z 	Connected to MongoDB
+[info]: 2019-07-02T15:52:29.559Z 	Morgan enabled...
+[info]: 2019-07-02T15:52:29.813Z 	Listening on port 3000
+[info]: 2019-07-02T15:52:29.850Z 	Connected to MongoDB
+[info]: 2019-07-02T15:52:32.335Z 	Morgan enabled...
+[info]: 2019-07-02T15:52:32.588Z 	Listening on port 3000
+[info]: 2019-07-02T15:52:32.621Z 	Connected to MongoDB
+[info]: 2019-07-02T15:52:38.057Z 	Morgan enabled...
+[info]: 2019-07-02T15:52:38.334Z 	Listening on port 3000
+[info]: 2019-07-02T15:52:38.367Z 	Connected to MongoDB
+[info]: 2019-07-02T15:53:03.864Z 	Morgan enabled...
+[info]: 2019-07-02T15:53:04.148Z 	Listening on port 3000
+[info]: 2019-07-02T15:53:04.184Z 	Connected to MongoDB
+[info]: 2019-07-02T15:53:06.373Z 	Morgan enabled...
+[info]: 2019-07-02T15:53:06.655Z 	Listening on port 3000
+[info]: 2019-07-02T15:53:06.687Z 	Connected to MongoDB
+[info]: 2019-07-02T15:53:09.285Z 	Morgan enabled...
+[info]: 2019-07-02T15:53:09.575Z 	Listening on port 3000
+[info]: 2019-07-02T15:53:09.610Z 	Connected to MongoDB
+[info]: 2019-07-02T15:53:28.912Z 	Morgan enabled...
+[info]: 2019-07-02T15:53:29.226Z 	Listening on port 3000
+[info]: 2019-07-02T15:53:29.269Z 	Connected to MongoDB
+[info]: 2019-07-02T15:55:08.010Z 	Morgan enabled...
+[info]: 2019-07-02T15:55:08.303Z 	Listening on port 3000
+[info]: 2019-07-02T15:55:08.337Z 	Connected to MongoDB
+[info]: 2019-07-02T16:00:38.977Z 	Morgan enabled...
+[info]: 2019-07-02T16:00:39.254Z 	Listening on port 3000
+[info]: 2019-07-02T16:00:39.292Z 	Connected to MongoDB
+[info]: 2019-07-02T16:00:50.804Z 	Morgan enabled...
+[info]: 2019-07-02T16:00:51.087Z 	Listening on port 3000
+[info]: 2019-07-02T16:00:51.120Z 	Connected to MongoDB
+[info]: 2019-07-02T16:01:14.889Z 	Morgan enabled...
+[error]: 2019-07-02T16:01:14.893Z 	uncaughtException: FATAL ERROR: 
+Error: FATAL ERROR: 
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/config.js:14:15)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:9:28)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[error]: 2019-07-02T16:01:14.893Z 	FATAL ERROR: 
+[info]: 2019-07-02T16:01:36.354Z 	Morgan enabled...
+[error]: 2019-07-02T16:01:36.358Z 	uncaughtException: FATAL ERROR: jwtPrivateKey is not defined
+Error: FATAL ERROR: jwtPrivateKey is not defined
+    at module.exports (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/config.js:14:15)
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:9:28)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
+[error]: 2019-07-02T16:01:36.359Z 	FATAL ERROR: jwtPrivateKey is not defined
+[info]: 2019-07-02T16:04:34.967Z 	Morgan enabled...
+[info]: 2019-07-02T16:04:35.247Z 	Listening on port 3000
+[info]: 2019-07-02T16:04:35.283Z 	Connected to MongoDB

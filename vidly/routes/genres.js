@@ -8,7 +8,6 @@
 const { Genres, validate } = require ('../models/genres');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
-// const asyncMiddleware = require('../middleware/async');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
@@ -24,7 +23,7 @@ const router = express.Router();
 // get all genres
 router.get('/', async (req, res, next) => {
 
-    throw new Error('Could not get genres.');
+    // throw new Error('Could not get genres.');
 
     const allGenres = await Genres.find();
 
