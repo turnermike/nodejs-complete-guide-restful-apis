@@ -17,6 +17,6 @@ module.exports = function(err, req, res, next){
     // logger.error(err.message, err);    // second argument is for meta data but doens't work with winston-monbodb
 
     res.status(500).send(err.message);
-    process.exit(1);
+    // process.exit(1);
 
 }

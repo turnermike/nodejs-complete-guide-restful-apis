@@ -24,7 +24,7 @@ const router = express.Router();
 // get all genres
 router.get('/', async (req, res, next) => {
 
-    // throw new Error('Could not get genres.');
+    throw new Error('Could not get genres.');
 
     const allGenres = await Genres.find();
 

@@ -69,15 +69,23 @@ var options = {
 
 };
 
+
+// array of available Winston transports based off of config values
+let availableTransports = [];
+( config.get('errorLogToFile') ) ? availableTransports.push(new transports.File(options.file)) : '';
+( config.get('errorLogToDB') ) ? availableTransports.push(new transports.MongoDB(options.mongodb)) : '';
+( config.get('errorLogToConsole') ) ? availableTransports.push(new transports.Console(options.console)) : '';
+
 // instantiate a new Winston Logger with the settings defined above
 const logger = createLogger({
     level: 'info',
     format: options.format,
-    transports: [
-        new transports.File(options.file),
-        new transports.MongoDB(options.mongodb)
-        // see environment conditional below for console
-    ],
+    transports: availableTransports,
+    // transports: [
+    //     new transports.File(options.file),
+    //     new transports.MongoDB(options.mongodb)
+    //     // see environment conditional below for console
+    // ],
     exitOnError: false, // do not exit on handled exceptions
 });
 
@@ -89,9 +97,9 @@ logger.stream = {
   },
 };
 
-// use console for dev/staging only
-if (process.env.NODE_ENV !== 'production') {
-    logger.add(new transports.Console(options.console));
-}
+// // use console for dev/staging only
+// if (process.env.NODE_ENV !== 'production') {
+//     logger.add(new transports.Console(options.console));
+// }
 
 module.exports = logger;
