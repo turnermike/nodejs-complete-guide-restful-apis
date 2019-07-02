@@ -1,1 +1,48 @@
-[error]: 2019-07-02T13:35:02.080Z 	Could not get genres. undefined
+[error]: 2019-07-02T13:45:22.335Z 	uncaughtException: Delibertly thrown Promise Rejection
+Error: Delibertly thrown Promise Rejection
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:51:26)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T13:45:22.337Z 	Delibertly thrown Promise Rejection undefined
+[error]: 2019-07-02T13:46:03.100Z 	uncaughtException: Delibertly thrown Promise Rejection
+Error: Delibertly thrown Promise Rejection
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:51:26)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T13:46:03.101Z 	Delibertly thrown Promise Rejection undefined
+[error]: 2019-07-02T13:48:18.806Z 	uncaughtException: Delibertly thrown Promise Rejection
+Error: Delibertly thrown Promise Rejection
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:51:26)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T13:48:18.807Z 	Delibertly thrown Promise Rejection undefined
+[error]: 2019-07-02T13:49:44.771Z 	uncaughtException: Delibertly thrown Promise Rejection
+Error: Delibertly thrown Promise Rejection
+    at Object.<anonymous> (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/index.js:51:26)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:741:12)
+    at startup (internal/bootstrap/node.js:285:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3) undefined
+[error]: 2019-07-02T13:49:44.772Z 	Delibertly thrown Promise Rejection undefined

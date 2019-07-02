@@ -1,15 +1,14 @@
- const express = require('express');
+const express = require('express');
 const ObjectID = require('mongodb').ObjectID;
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const config = require('config');
-const logger = require('./config/winston');         // using custom config file to initialize winston
+const logger = require('./middleware/logger');         // initialize winston middleware
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 require('express-async-errors');
 const debug = require('debug')('app:startup');      // requires env var: export DEBUG=app:startup,app:db
-// const logger = require('./middleware/logger');      // middleware
 const error = require('./middleware/error');        // error handling middleware
 // const courses = require('./routes/courses');        // course router
 const genres = require('./routes/genres');          // genres router
@@ -45,11 +44,6 @@ process.on('uncaughtException', (ex) => {
 process.on('unhandledRejection', (ex) => {
     throw ex;
 });
-
-
-// // winston/error logging config (used to catch exceptions with express request processing pipeline)
-// if (config.get('errorLogToFile')) winston.add(new winston.transports.File({ filename: './logs/errors.log' }));
-// if (config.get('errorLogToDB')) winston.add(new winston.transports.MongoDB({ db: config.get('mongodb') }));
 
 // thow an exception for testing
 // throw new Error('Delibertly thrown Exception for testing');
