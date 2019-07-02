@@ -48,6 +48,13 @@ Query string parameters used for additional data or optional data to back end se
 ```/api/posts/2018/02?sorBy=name```
 
 
+## Testing
+Confirm that all possible execution paths are tested via Unit test.
+
+### Unit Testing
+Using Jest.
+[https://jestjs.io/](https://jestjs.io/)
+
 ## NPM Packages
 Some notes or referrence for NPM packages used.
 
