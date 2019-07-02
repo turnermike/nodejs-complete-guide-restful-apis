@@ -49,6 +49,9 @@ Query string parameters used for additional data or optional data to back end se
 
 
 ## Testing
+
+### Unit Testing
+Used when not working with any external resources such as a database or API.
 Confirm that all possible execution paths are tested via Unit test.
 
 ### Unit Testing

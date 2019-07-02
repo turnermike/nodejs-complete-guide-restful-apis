@@ -1,0 +1,8 @@
+{
+    "name": "Vidly - Test",
+    "mongodb": "mongodb://localhost/node-restful-api",
+    "jwtPrivateKey": "vidly_jwtPrivateKey",
+    "errorLogToFile": true,
+    "errorLogToDB": true,
+    "errorLogToConsole": true
+}
