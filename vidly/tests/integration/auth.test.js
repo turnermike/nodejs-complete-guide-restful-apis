@@ -5,7 +5,7 @@
  */
 
 const request = require('supertest');
-// const { Genres } = require('../../models/genres');
+const { Genres } = require('../../models/genres');
 const { Users } = require('../../models/users');
 
 let server;
@@ -22,7 +22,7 @@ describe('auth middleware', () => {
     // executed after each test
     afterEach(async () => {
         // console.log('afterEach called');
-        // await Genres.remove({});                    // remove genres table after each test
+        await Genres.remove({});                    // remove genres table after each test
         server.close();                             // top express
     });
 

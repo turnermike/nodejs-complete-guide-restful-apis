@@ -23,8 +23,9 @@ describe('/api/genres', () => {
     // executed after each test
     afterEach(async () => {
 
-        server.close();                     // stop express
+
         await Genres.remove({});            // remove genres table after each test
+        server.close();                     // stop express
 
         // mongoose.connection.db.listCollections({ name: 'genres' })
         //     .next(function(err, collinfo) {
