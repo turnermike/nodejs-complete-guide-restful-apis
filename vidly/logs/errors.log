@@ -1073,3 +1073,95 @@ Error: FATAL ERROR: jwtPrivateKey is not defined
 [info]: 2019-07-02T20:56:11.499Z 	Morgan enabled...
 [info]: 2019-07-02T20:56:11.854Z 	Listening on port 3000
 [info]: 2019-07-02T20:56:11.902Z 	Connected to MongoDB
+[info]: 2019-07-03T12:11:21.140Z 	Morgan enabled...
+[info]: 2019-07-03T12:11:21.597Z 	Listening on port 3000
+[info]: 2019-07-03T12:11:21.638Z 	Connected to MongoDB
+[info]: 2019-07-03T12:14:02.469Z 	Morgan enabled...
+[info]: 2019-07-03T12:14:02.797Z 	Listening on port 3000
+[info]: 2019-07-03T12:14:02.840Z 	Connected to MongoDB
+[info]: 2019-07-03T12:14:43.027Z 	Morgan enabled...
+[info]: 2019-07-03T12:14:43.403Z 	Listening on port 3000
+[info]: 2019-07-03T12:14:43.452Z 	Connected to MongoDB
+[info]: 2019-07-03T12:14:43.991Z 	Morgan enabled...
+[info]: 2019-07-03T12:14:44.283Z 	Listening on port 3000
+[info]: 2019-07-03T12:14:44.314Z 	Connected to MongoDB
+[info]: 2019-07-03T12:15:42.581Z 	Morgan enabled...
+[info]: 2019-07-03T12:15:42.920Z 	Listening on port 3000
+[info]: 2019-07-03T12:15:42.961Z 	Connected to MongoDB
+[info]: 2019-07-03T12:16:43.668Z 	Morgan enabled...
+[info]: 2019-07-03T12:16:44.023Z 	Listening on port 3000
+[info]: 2019-07-03T12:16:44.074Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T12:17:00.931Z 	Morgan enabled...
+[info]: 2019-07-03T12:17:01.251Z 	Listening on port 3000
+[info]: 2019-07-03T12:17:01.301Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T12:17:54.919Z 	Morgan enabled...
+[info]: 2019-07-03T12:17:55.236Z 	Listening on port 3000
+[info]: 2019-07-03T12:17:55.279Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T12:17:58.183Z 	Morgan enabled...
+[info]: 2019-07-03T12:17:58.514Z 	Listening on port 3000
+[info]: 2019-07-03T12:17:58.561Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T12:18:04.140Z 	Morgan enabled...
+[info]: 2019-07-03T12:18:04.428Z 	Listening on port 3000
+[info]: 2019-07-03T12:18:04.496Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T12:19:07.182Z 	Morgan enabled...
+[info]: 2019-07-03T12:19:07.509Z 	Listening on port 3000
+[info]: 2019-07-03T12:19:07.561Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T12:19:36.767Z 	Morgan enabled...
+[info]: 2019-07-03T12:19:37.133Z 	Listening on port 3000
+[info]: 2019-07-03T12:19:37.178Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T12:19:50.479Z 	Listening on port 3000
+[info]: 2019-07-03T12:19:50.520Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T12:22:33.236Z 	Listening on port 3000
+[info]: 2019-07-03T12:22:33.277Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[error]: 2019-07-03T12:22:55.085Z 	uncaughtException: Unexpected token )
+/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/logging.js:26
+    if()
+       ^
+
+SyntaxError: Unexpected token )
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+[error]: 2019-07-03T12:23:05.593Z 	uncaughtException: Unexpected token }
+/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/logging.js:56
+});
+^
+
+SyntaxError: Unexpected token }
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+[error]: 2019-07-03T12:23:25.293Z 	uncaughtException: Unexpected token }
+/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/startup/logging.js:56
+});
+^
+
+SyntaxError: Unexpected token }
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+[info]: 2019-07-03T12:23:38.290Z 	Listening on port 3000
+[info]: 2019-07-03T12:23:38.324Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T12:23:50.622Z 	Listening on port 3000
+[info]: 2019-07-03T12:23:50.658Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test

@@ -5,6 +5,7 @@ const logger = require('./middleware/logger');      // initialize winston middle
 const port = process.env.PORT || 3000;
 
 const app = express();                              // initialize express
+
 require('./startup/logging')(app);                  // initialize error logging
 require('./startup/config')();                        // initialize config options
 require('./startup/routes')(app);                   // load routes

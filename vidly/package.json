@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev-no-test": "export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js",
     "dev": "concurrently \"export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js\" \"npm run test\"",
-    "test": "jest --watchAll"
+    "dev-test": "concurrently \"export DEBUG=app.startup,app.db && export NODE_ENV=test && nodemon index.js\" \"npm run test\"",
+    "dev-no-test": "export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js",
+    "test": "jest --watchAll --verbose"
   },
   "keywords": [],
   "author": "",

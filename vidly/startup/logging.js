@@ -20,8 +20,11 @@ const debug = require('debug')('app:startup');      // requires env var: export 
 
 module.exports = function(app) {
 
+    const devEnvs = ['development', 'test'];
+
     // output app info
-    if (app.get('env') === 'development') {
+    if(devEnvs.includes(app.get('env'))) {
+    // if (app.get('env') === 'development') {
         debug(`Application Name: ${config.get('name')}`);
         debug(`MongoDB URL: ${config.get('mongodb')}`);
         debug(`jwtPrivateKey: ${config.get('jwtPrivateKey')}`);

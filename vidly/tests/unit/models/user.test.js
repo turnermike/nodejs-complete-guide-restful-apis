@@ -9,7 +9,7 @@ const { Users } = require('../../../models/users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
-console.log('JWT Key: ', config.get('jwtPrivateKey'));
+// console.log('JWT Key: ', config.get('jwtPrivateKey'));
 
 describe('user.generateAuthToken', () => {
 

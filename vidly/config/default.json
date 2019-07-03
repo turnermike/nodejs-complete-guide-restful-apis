@@ -1,5 +1,8 @@
 {
-    "name": "My Express App",
-    "jwtPrivateKey": "",
-    "errorLogToFile": ""
+    "name": "Vidly - Default",
+    "mongodb": "mongodb://localhost/node-restful-api",
+    "jwtPrivateKey": "vidly_jwtPrivateKey",
+    "errorLogToFile": true,
+    "errorLogToDB": true,
+    "errorLogToConsole": true
 }
