@@ -2199,3 +2199,7 @@ SyntaxError: Unexpected token ;
 [info]: 2019-07-03T19:23:31.553Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
 [info]: 2019-07-03T19:23:31.690Z 	Listening on port 3000
 [info]: 2019-07-03T19:23:31.726Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T19:45:41.992Z 	Listening on port 3000
+[info]: 2019-07-03T19:45:42.058Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T19:45:42.069Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T19:45:42.069Z 	Listening on port 3000
