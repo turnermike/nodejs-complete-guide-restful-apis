@@ -18,8 +18,8 @@ const home = require('../routes/home');              // default/base router
 module.exports = function(app) {
 
     app.use(express.json());                            // use express.json middleware in request processing pipeline
-    app.use(express.urlencoded({ extended: true }));    // allow use of key/value pairs has post data
-    app.use(express.static('public'));                  // set public directory
+    app.use(express.urlencoded({ extended: true }));    // allow use of key/value pairs with post data
+    // app.use(express.static('public'));                  // set public directory
     app.use(helmet());                                  // helps secure http headers
     app.use('/api/customers', customers);               // use the customs router object for any routes starting with /api/customers
     app.use('/api/genres', genres);                     // use the genres router object for any routes starting with /api/genres

@@ -6,6 +6,7 @@
 
 const request = require('supertest');
 const { Genres } = require('../../models/genres');
+const { Users } = require('../../models/users');
 
 let server;
 
@@ -66,6 +67,77 @@ describe('/api/genres', () => {
             // expect(res.body).toHaveProperty('name', genre.name);            // test for object property 'name' with value of 'genre1'
 
         });
+
+    });
+
+    // insert new genre
+    describe('POST /', () => {
+
+        it('Should return 401 if user is not logged in.', async () => {
+
+            const res = await request(server)               // send post request to server with parameters
+                .post('/api/genres')
+                .send({ name: 'genre1' });
+
+            expect(res.status).toBe(401);                   // test expects a 401 response code
+
+        });
+
+        it('Should return 400 if genre is less than 5 characters', async () => {
+
+            const token = new Users().generateAuthToken();  // generate jwt
+
+            const res = await request(server)               // send post request to server with parameters
+                .post('/api/genres')
+                .set('x-auth-token', token)                 // set header key/value
+                .send({ name: '1234' });
+
+            expect(res.status).toBe(400);                   // test expects a 400 response code
+
+        });
+
+        it('Should return 400 if genre is more than 50 characters', async () => {
+
+            const token = new Users().generateAuthToken();  // generate jwt
+
+            const res = await request(server)               // send post request to server with parameters
+                .post('/api/genres')
+                .set('x-auth-token', token)                 // set header key/value
+                .send({ name: new Array(52).join('a') });   // generate a string of 52 a's
+
+            expect(res.status).toBe(400);                   // test expects a 400 response code
+
+        });
+
+        it('Should save the genre if it is valid', async () => {
+
+            const token = new Users().generateAuthToken();          // generate jwt
+
+            const res = await request(server)                       // send post request to server with parameters
+                .post('/api/genres')
+                .set('x-auth-token', token)                         // set header key/value
+                .send({ name: 'genre1' });
+
+            const genre = await Genres.find({ name: 'genre1' });    // check database for new genre
+
+            expect(genre).not.toBeNull();                           // test expects not null genre
+
+        });
+
+        it('Should return the genre if it is valid', async () => {
+
+            const token = new Users().generateAuthToken();          // generate jwt
+
+            const res = await request(server)                       // send post request to server with parameters
+                .post('/api/genres')
+                .set('x-auth-token', token)                         // set header key/value
+                .send({ name: 'genre1' });
+
+            expect(res.body).toHaveProperty('_id');                 // test expects res.body to have an _id property
+            expect(res.body).toHaveProperty('name', 'genre1');      // test expects res.body to have a name property with value 'genre1'
+
+        });
+
     });
 
 });

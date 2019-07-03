@@ -1371,3 +1371,367 @@ SyntaxError: Unexpected token }
 [info]: 2019-07-03T14:56:12.375Z 	Morgan enabled...
 [info]: 2019-07-03T14:56:12.660Z 	Listening on port 3000
 [info]: 2019-07-03T14:56:12.692Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T14:58:54.104Z 	Morgan enabled...
+[info]: 2019-07-03T14:58:54.403Z 	Listening on port 3000
+[info]: 2019-07-03T14:58:54.438Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T14:59:37.492Z 	Morgan enabled...
+[info]: 2019-07-03T14:59:37.790Z 	Listening on port 3000
+[info]: 2019-07-03T14:59:37.826Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:00:59.594Z 	Morgan enabled...
+[info]: 2019-07-03T15:00:59.888Z 	Listening on port 3000
+[info]: 2019-07-03T15:00:59.920Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:01:13.310Z 	Morgan enabled...
+[info]: 2019-07-03T15:01:13.586Z 	Listening on port 3000
+[info]: 2019-07-03T15:01:13.618Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:01:42.294Z 	Morgan enabled...
+[info]: 2019-07-03T15:01:42.569Z 	Listening on port 3000
+[info]: 2019-07-03T15:01:42.602Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:01:54.416Z 	Morgan enabled...
+[info]: 2019-07-03T15:01:54.694Z 	Listening on port 3000
+[info]: 2019-07-03T15:01:54.728Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:02:08.615Z 	Morgan enabled...
+[info]: 2019-07-03T15:02:08.888Z 	Listening on port 3000
+[info]: 2019-07-03T15:02:08.923Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:02:30.070Z 	Morgan enabled...
+[info]: 2019-07-03T15:02:30.375Z 	Listening on port 3000
+[info]: 2019-07-03T15:02:30.412Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:03:08.598Z 	Morgan enabled...
+[info]: 2019-07-03T15:03:08.888Z 	Listening on port 3000
+[info]: 2019-07-03T15:03:08.925Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:03:24.297Z 	Listening on port 3000
+[info]: 2019-07-03T15:03:24.323Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:03:58.724Z 	Listening on port 3000
+[info]: 2019-07-03T15:03:58.753Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:04:06.466Z 	Listening on port 3000
+[info]: 2019-07-03T15:04:06.496Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:04:33.882Z 	Listening on port 3000
+[info]: 2019-07-03T15:04:33.911Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:05:45.949Z 	Listening on port 3000
+[info]: 2019-07-03T15:05:45.981Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:05:54.486Z 	Listening on port 3000
+[info]: 2019-07-03T15:05:54.517Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:07:28.655Z 	Listening on port 3000
+[info]: 2019-07-03T15:07:28.684Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:08:35.678Z 	Listening on port 3000
+[info]: 2019-07-03T15:08:35.707Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:09:54.859Z 	Listening on port 3000
+[info]: 2019-07-03T15:09:54.889Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:10:27.451Z 	Listening on port 3000
+[info]: 2019-07-03T15:10:27.479Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:11:21.239Z 	generateAuthToken called
+[info]: 2019-07-03T15:11:21.624Z 	Listening on port 3000
+[info]: 2019-07-03T15:11:21.652Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:11:21.731Z 	generateAuthToken called
+[info]: 2019-07-03T15:11:24.383Z 	generateAuthToken called
+[info]: 2019-07-03T15:11:24.786Z 	Listening on port 3000
+[info]: 2019-07-03T15:11:24.816Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:11:24.896Z 	generateAuthToken called
+[info]: 2019-07-03T15:12:43.329Z 	generateAuthToken called
+[info]: 2019-07-03T15:12:43.728Z 	Listening on port 3000
+[info]: 2019-07-03T15:12:43.757Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:12:43.836Z 	generateAuthToken called
+[info]: 2019-07-03T15:12:49.910Z 	generateAuthToken called
+[info]: 2019-07-03T15:12:50.298Z 	Listening on port 3000
+[info]: 2019-07-03T15:12:50.327Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:12:50.404Z 	generateAuthToken called
+[info]: 2019-07-03T15:13:02.072Z 	Listening on port 3000
+[info]: 2019-07-03T15:13:02.101Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:17:31.158Z 	Listening on port 3000
+[info]: 2019-07-03T15:17:31.187Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:19:20.370Z 	Listening on port 3000
+[info]: 2019-07-03T15:19:20.398Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:19:32.947Z 	Listening on port 3000
+[info]: 2019-07-03T15:19:32.977Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:20:27.876Z 	Listening on port 3000
+[info]: 2019-07-03T15:20:27.906Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[error]: 2019-07-03T15:20:28.007Z 	logger is not defined
+[info]: 2019-07-03T15:21:00.089Z 	Listening on port 3000
+[info]: 2019-07-03T15:21:00.119Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:21:00.212Z 	ADD NEW: 
+[info]: 2019-07-03T15:22:27.044Z 	Morgan enabled...
+[info]: 2019-07-03T15:22:27.317Z 	Listening on port 3000
+[info]: 2019-07-03T15:22:27.350Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:22:31.542Z 	ADD NEW: 
+[info]: 2019-07-03T15:22:56.282Z 	Morgan enabled...
+[info]: 2019-07-03T15:22:56.560Z 	Listening on port 3000
+[info]: 2019-07-03T15:22:56.592Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:23:12.451Z 	ADD NEW: 
+[info]: 2019-07-03T15:23:17.246Z 	ADD NEW: 
+[info]: 2019-07-03T15:24:00.910Z 	Morgan enabled...
+[info]: 2019-07-03T15:24:01.197Z 	Listening on port 3000
+[info]: 2019-07-03T15:24:01.229Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[error]: 2019-07-03T15:24:05.143Z 	uncaughtException: Genres validation failed: name: Path `name` is required.
+ValidationError: name: Path `name` is required.
+    at new ValidationError (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/error/validation.js:30:11)
+    at model.Document.invalidate (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/document.js:2291:32)
+    at p.doValidate.skipSchemaValidators (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/document.js:2140:17)
+    at /Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/schematype.js:1037:9
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+From previous event:
+    at Object.promiseOrCallback (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/utils.js:270:10)
+    at model.Model.save (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/model.js:463:16)
+    at router.post (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/routes/genres.js:71:26)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/route.js:137:13)
+    at auth (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/middleware/auth.js:22:9)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/route.js:112:3)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:47:12)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:317:13)
+    at /Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:275:10)
+    at internalNext (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/helmet/index.js:47:33)
+[error]: 2019-07-03T15:24:05.144Z 	Genres validation failed: name: Path `name` is required.
+[info]: 2019-07-03T15:25:50.867Z 	Morgan enabled...
+[info]: 2019-07-03T15:25:51.157Z 	Listening on port 3000
+[info]: 2019-07-03T15:25:51.190Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[error]: 2019-07-03T15:26:16.974Z 	uncaughtException: Genres validation failed: name: Path `name` is required.
+ValidationError: name: Path `name` is required.
+    at new ValidationError (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/error/validation.js:30:11)
+    at model.Document.invalidate (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/document.js:2291:32)
+    at p.doValidate.skipSchemaValidators (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/document.js:2140:17)
+    at /Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/schematype.js:1037:9
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+From previous event:
+    at Object.promiseOrCallback (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/utils.js:270:10)
+    at model.Model.save (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/mongoose/lib/model.js:463:16)
+    at router.post (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/routes/genres.js:71:26)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/route.js:137:13)
+    at auth (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/middleware/auth.js:22:9)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/route.js:112:3)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:47:12)
+    at newFn (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express-async-errors/index.js:16:20)
+    at Layer.handle [as handle_request] (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:317:13)
+    at /Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/express/lib/router/index.js:275:10)
+    at internalNext (/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/node_modules/helmet/index.js:47:33)
+[error]: 2019-07-03T15:26:16.975Z 	Genres validation failed: name: Path `name` is required.
+[info]: 2019-07-03T15:26:36.259Z 	Morgan enabled...
+[info]: 2019-07-03T15:26:36.541Z 	Listening on port 3000
+[info]: 2019-07-03T15:26:36.574Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:27:11.234Z 	Morgan enabled...
+[info]: 2019-07-03T15:27:11.526Z 	Listening on port 3000
+[info]: 2019-07-03T15:27:11.560Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:27:31.709Z 	Morgan enabled...
+[info]: 2019-07-03T15:27:31.995Z 	Listening on port 3000
+[info]: 2019-07-03T15:27:32.028Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:27:56.865Z 	Morgan enabled...
+[info]: 2019-07-03T15:27:57.143Z 	Listening on port 3000
+[info]: 2019-07-03T15:27:57.177Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:28:07.905Z 	Morgan enabled...
+[info]: 2019-07-03T15:28:08.190Z 	Listening on port 3000
+[info]: 2019-07-03T15:28:08.219Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:28:57.565Z 	Morgan enabled...
+[info]: 2019-07-03T15:28:57.852Z 	Listening on port 3000
+[info]: 2019-07-03T15:28:57.885Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:30:01.636Z 	Morgan enabled...
+[info]: 2019-07-03T15:30:01.913Z 	Listening on port 3000
+[info]: 2019-07-03T15:30:01.945Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:30:33.542Z 	Morgan enabled...
+[info]: 2019-07-03T15:30:33.819Z 	Listening on port 3000
+[info]: 2019-07-03T15:30:33.852Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:31:03.478Z 	Morgan enabled...
+[info]: 2019-07-03T15:31:03.759Z 	Listening on port 3000
+[info]: 2019-07-03T15:31:03.793Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:31:17.884Z 	Morgan enabled...
+[info]: 2019-07-03T15:31:18.167Z 	Listening on port 3000
+[info]: 2019-07-03T15:31:18.201Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:32:23.639Z 	Morgan enabled...
+[info]: 2019-07-03T15:32:23.925Z 	Listening on port 3000
+[info]: 2019-07-03T15:32:23.962Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:34:13.538Z 	Morgan enabled...
+[info]: 2019-07-03T15:34:13.816Z 	Listening on port 3000
+[info]: 2019-07-03T15:34:13.849Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:34:19.548Z 	Morgan enabled...
+[info]: 2019-07-03T15:34:19.826Z 	Listening on port 3000
+[info]: 2019-07-03T15:34:19.862Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:34:29.742Z 	Morgan enabled...
+[info]: 2019-07-03T15:34:30.024Z 	Listening on port 3000
+[info]: 2019-07-03T15:34:30.057Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:34:50.537Z 	Morgan enabled...
+[info]: 2019-07-03T15:34:50.821Z 	Listening on port 3000
+[info]: 2019-07-03T15:34:50.854Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:35:00.236Z 	Morgan enabled...
+[info]: 2019-07-03T15:35:00.519Z 	Listening on port 3000
+[info]: 2019-07-03T15:35:00.553Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:35:21.483Z 	Morgan enabled...
+[info]: 2019-07-03T15:35:21.762Z 	Listening on port 3000
+[info]: 2019-07-03T15:35:21.794Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:38:37.524Z 	Morgan enabled...
+[info]: 2019-07-03T15:38:37.805Z 	Listening on port 3000
+[info]: 2019-07-03T15:38:37.837Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:39:00.487Z 	Morgan enabled...
+[info]: 2019-07-03T15:39:00.765Z 	Listening on port 3000
+[info]: 2019-07-03T15:39:00.797Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:39:18.147Z 	Morgan enabled...
+[info]: 2019-07-03T15:39:18.430Z 	Listening on port 3000
+[info]: 2019-07-03T15:39:18.462Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:39:36.994Z 	Morgan enabled...
+[info]: 2019-07-03T15:39:37.271Z 	Listening on port 3000
+[info]: 2019-07-03T15:39:37.304Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:39:52.669Z 	Morgan enabled...
+[info]: 2019-07-03T15:39:52.948Z 	Listening on port 3000
+[info]: 2019-07-03T15:39:52.978Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:40:18.959Z 	Morgan enabled...
+[info]: 2019-07-03T15:40:19.260Z 	Listening on port 3000
+[info]: 2019-07-03T15:40:19.297Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:41:21.100Z 	Morgan enabled...
+[info]: 2019-07-03T15:41:21.375Z 	Listening on port 3000
+[info]: 2019-07-03T15:41:21.410Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:42:12.701Z 	Morgan enabled...
+[error]: 2019-07-03T15:42:12.740Z 	uncaughtException: Unexpected token ;
+/Users/mike/Sites/Personal/nodejs-complete-guide-restful-apis/vidly/models/genres.js:32
+        name: Joi.string().required();
+                                     ^
+
+SyntaxError: Unexpected token ;
+    at new Script (vm.js:79:7)
+    at createScript (vm.js:251:10)
+    at Object.runInThisContext (vm.js:303:10)
+    at Module._compile (internal/modules/cjs/loader.js:656:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:3)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+[error]: 2019-07-03T15:42:12.740Z 	Unexpected token ;
+[info]: 2019-07-03T15:42:25.178Z 	Morgan enabled...
+[info]: 2019-07-03T15:42:25.484Z 	Listening on port 3000
+[info]: 2019-07-03T15:42:25.519Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:42:30.013Z 	Morgan enabled...
+[info]: 2019-07-03T15:42:30.294Z 	Listening on port 3000
+[info]: 2019-07-03T15:42:30.326Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:43:09.800Z 	Morgan enabled...
+[info]: 2019-07-03T15:43:10.084Z 	Listening on port 3000
+[info]: 2019-07-03T15:43:10.117Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:43:59.271Z 	Morgan enabled...
+[info]: 2019-07-03T15:43:59.565Z 	Listening on port 3000
+[info]: 2019-07-03T15:43:59.600Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:44:02.218Z 	Morgan enabled...
+[info]: 2019-07-03T15:44:02.506Z 	Listening on port 3000
+[info]: 2019-07-03T15:44:02.538Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:44:28.902Z 	Morgan enabled...
+[info]: 2019-07-03T15:44:29.178Z 	Listening on port 3000
+[info]: 2019-07-03T15:44:29.212Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:44:32.575Z 	ADD NEW: 
+[info]: 2019-07-03T15:44:52.586Z 	Morgan enabled...
+[info]: 2019-07-03T15:44:52.862Z 	Listening on port 3000
+[info]: 2019-07-03T15:44:52.895Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:44:54.968Z 	ADD NEW: 
+[info]: 2019-07-03T15:45:44.699Z 	Morgan enabled...
+[info]: 2019-07-03T15:45:44.976Z 	Listening on port 3000
+[info]: 2019-07-03T15:45:45.009Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:46:21.197Z 	Morgan enabled...
+[info]: 2019-07-03T15:46:21.478Z 	Listening on port 3000
+[info]: 2019-07-03T15:46:21.511Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:46:31.165Z 	Morgan enabled...
+[info]: 2019-07-03T15:46:31.445Z 	Listening on port 3000
+[info]: 2019-07-03T15:46:31.477Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:46:41.724Z 	Morgan enabled...
+[info]: 2019-07-03T15:46:42.008Z 	Listening on port 3000
+[info]: 2019-07-03T15:46:42.042Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:47:01.056Z 	Morgan enabled...
+[info]: 2019-07-03T15:47:01.335Z 	Listening on port 3000
+[info]: 2019-07-03T15:47:01.368Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:47:04.742Z 	ADD NEW: 
+[info]: 2019-07-03T15:47:25.372Z 	Morgan enabled...
+[info]: 2019-07-03T15:47:25.655Z 	Listening on port 3000
+[info]: 2019-07-03T15:47:25.687Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:47:27.404Z 	ADD NEW: 
+[info]: 2019-07-03T15:47:39.780Z 	Morgan enabled...
+[info]: 2019-07-03T15:47:40.061Z 	Listening on port 3000
+[info]: 2019-07-03T15:47:40.094Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:48:00.164Z 	Morgan enabled...
+[info]: 2019-07-03T15:48:00.442Z 	Listening on port 3000
+[info]: 2019-07-03T15:48:00.475Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:48:24.428Z 	Morgan enabled...
+[info]: 2019-07-03T15:48:24.705Z 	Listening on port 3000
+[info]: 2019-07-03T15:48:24.742Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:48:33.865Z 	Listening on port 3000
+[info]: 2019-07-03T15:48:33.894Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:49:47.856Z 	Listening on port 3000
+[info]: 2019-07-03T15:49:47.888Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:49:57.879Z 	Listening on port 3000
+[info]: 2019-07-03T15:49:57.913Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:51:13.752Z 	Listening on port 3000
+[info]: 2019-07-03T15:51:13.784Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:52:24.689Z 	Listening on port 3000
+[info]: 2019-07-03T15:52:24.720Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:52:38.115Z 	Listening on port 3000
+[info]: 2019-07-03T15:52:38.142Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:53:02.390Z 	Morgan enabled...
+[info]: 2019-07-03T15:53:02.668Z 	Listening on port 3000
+[info]: 2019-07-03T15:53:02.703Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:53:23.284Z 	Morgan enabled...
+[info]: 2019-07-03T15:53:23.564Z 	Listening on port 3000
+[info]: 2019-07-03T15:53:23.597Z 	Connected to MongoDB: mongodb://localhost/node-restful-api
+[info]: 2019-07-03T15:53:54.047Z 	Listening on port 3000
+[info]: 2019-07-03T15:53:54.076Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:54:02.833Z 	Listening on port 3000
+[info]: 2019-07-03T15:54:02.863Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:54:11.220Z 	Listening on port 3000
+[info]: 2019-07-03T15:54:11.249Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:54:19.703Z 	Listening on port 3000
+[info]: 2019-07-03T15:54:19.734Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:54:46.775Z 	Listening on port 3000
+[info]: 2019-07-03T15:54:46.804Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T15:55:08.756Z 	Listening on port 3000
+[info]: 2019-07-03T15:55:08.789Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:12:27.811Z 	Listening on port 3000
+[info]: 2019-07-03T16:12:27.843Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:13:22.435Z 	Listening on port 3000
+[info]: 2019-07-03T16:13:22.464Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:13:58.527Z 	Listening on port 3000
+[info]: 2019-07-03T16:13:58.557Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:14:14.858Z 	Listening on port 3000
+[info]: 2019-07-03T16:14:14.887Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:14:29.228Z 	Listening on port 3000
+[info]: 2019-07-03T16:14:29.257Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:15:19.632Z 	Listening on port 3000
+[info]: 2019-07-03T16:15:19.662Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:15:29.751Z 	Listening on port 3000
+[info]: 2019-07-03T16:15:29.779Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:15:41.884Z 	Listening on port 3000
+[info]: 2019-07-03T16:15:41.913Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:16:11.240Z 	Listening on port 3000
+[info]: 2019-07-03T16:16:11.270Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:16:36.592Z 	Listening on port 3000
+[info]: 2019-07-03T16:16:36.621Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:16:59.433Z 	Listening on port 3000
+[info]: 2019-07-03T16:16:59.465Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:18:28.443Z 	Listening on port 3000
+[info]: 2019-07-03T16:18:28.473Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:18:57.299Z 	Listening on port 3000
+[info]: 2019-07-03T16:18:57.328Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:19:40.634Z 	Listening on port 3000
+[info]: 2019-07-03T16:19:40.662Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:20:03.773Z 	Listening on port 3000
+[info]: 2019-07-03T16:20:03.802Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test
+[info]: 2019-07-03T16:22:31.658Z 	Listening on port 3000
+[info]: 2019-07-03T16:22:31.693Z 	Connected to MongoDB: mongodb://localhost/node-restful-api-test

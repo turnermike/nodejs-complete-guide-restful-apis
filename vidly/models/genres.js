@@ -12,9 +12,9 @@ const Joi = require('joi');
 const genresSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,
-        minlength: [2, 'Name must have at least 2 characters'],
-        maxlength: [255, 'Name must have a maximum of 255 characters'],
+        // required: true,
+        minlength: [5, 'Name must have at least 2 characters'],
+        maxlength: [50, 'Name must have a maximum of 255 characters'],
         trim: true,
     }
 });
@@ -28,7 +28,7 @@ function validateGenres(genre) {
     // debug('validateGenres', genre);
 
     const schema = {
-        name: Joi.string().required(),
+        name: Joi.string().min(5).max(50).required()
     };
 
     return Joi.validate(genre, schema);

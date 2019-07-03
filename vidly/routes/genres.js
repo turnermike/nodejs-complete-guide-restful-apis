@@ -8,12 +8,14 @@
 const { Genres, validate } = require ('../models/genres');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
+const logger = require('../middleware/logger');
 const validateObjectId = require('../middleware/validateObjectId');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
 const debug = require('debug')('app:db');
 const morgan = require('morgan');
+
 const router = express.Router();
 
 
@@ -36,9 +38,6 @@ router.get('/', async (req, res, next) => {
 // get genre by id
 router.get('/:id', validateObjectId, async (req, res) => {
 
-    // if (! mongoose.Types.ObjectId.isValid(req.params.id))           // return 404 if invalid id
-    //     return res.status(404).send('Invalid ID');
-
     const genre = await Genres.findById(
         { _id: new ObjectID(req.params.id) },
         (err, genre) => {
@@ -57,7 +56,11 @@ router.get('/:id', validateObjectId, async (req, res) => {
 });
 
 // add new genre
-router.post('/', auth, (req, res) => {
+router.post('/', auth, async (req, res) => {
+
+    // console.log('req.body', req.body);
+    // console.log('req.body.name', req.body.name);
+    // res.send({});
 
     const { error } = validate(req.body);
 
@@ -70,16 +73,6 @@ router.post('/', auth, (req, res) => {
     const result = genre.save(); // .save() returns a promise
 
     res.send(genre);
-
-    // result
-    //     .then(result => {
-    //         debug('New genre added: \n', result);
-    //         res.send(result);
-    //     })
-    //     .catch(err => {
-    //         debug('Insert error: \n', err.errors);
-    //         res.send(err.errors);
-    //     });
 
 });
 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "jest": {
     "verbose": true,
-    "testPathIgnorePatterns": ["/demo/"]
+    "testPathIgnorePatterns": ["/demo/"],
+    "testEnvironment": "node"
   },
   "scripts": {
     "dev": "export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js",

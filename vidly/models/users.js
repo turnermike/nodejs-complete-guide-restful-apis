@@ -10,6 +10,7 @@ const Joi = require('joi');
 const PasswordComplexity = require('joi-password-complexity');
 const jwt = require('jsonwebtoken');
 const config = require('config');
+const logger = require('../middleware/logger');
 
 // joi-password-complexity options
 const passwordComplexityOptions = {
@@ -51,7 +52,8 @@ const userSchema = new mongoose.Schema({
 // generate auth token
 userSchema.methods.generateAuthToken = function() {
 
-    // console.log('this', this);
+    // logger.info('generateAuthToken called');
+
     const token = jwt.sign({ _id: this._id, isAdmin: this.isAdmin }, config.get('jwtPrivateKey'));
     return token;
 
