@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": ["/demo/"]
+  },
   "scripts": {
-    "dev": "concurrently \"export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js\" \"npm run test\"",
-    "dev-test": "concurrently \"export DEBUG=app.startup,app.db && export NODE_ENV=test && nodemon index.js\" \"npm run test\"",
-    "dev-no-test": "export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js",
-    "test": "jest --watchAll --verbose"
+    "dev": "export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js",
+    "dev:test": "concurrently \"export DEBUG=app.startup,app.db && export NODE_ENV=test && nodemon index.js\" \"npm run test\"",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +39,7 @@
   "devDependencies": {
     "concurrently": "^4.1.1",
     "jest": "^24.8.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
   }
 }

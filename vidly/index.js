@@ -2,7 +2,6 @@ const express = require('express');
 const ObjectID = require('mongodb').ObjectID;
 const config = require('config');
 const logger = require('./middleware/logger');      // initialize winston middleware
-const port = process.env.PORT || 3000;
 
 const app = express();                              // initialize express
 
@@ -19,9 +18,10 @@ app.set('views', './views');                        // template location (views 
 
 
 // start server
-app.listen(port, () => { logger.info(`Listening on port ${port}`) });
+const port = process.env.PORT || 3000;
+const server = app.listen(port, () => { logger.info(`Listening on port ${port}`) });
 
-
+module.exports = server;
 
 
 

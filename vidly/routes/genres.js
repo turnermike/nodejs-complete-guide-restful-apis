@@ -8,6 +8,7 @@
 const { Genres, validate } = require ('../models/genres');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
+const validateObjectId = require('../middleware/validateObjectId');
 const express = require('express');
 const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
@@ -33,7 +34,10 @@ router.get('/', async (req, res, next) => {
 });
 
 // get genre by id
-router.get('/:id', async (req, res) => {
+router.get('/:id', validateObjectId, async (req, res) => {
+
+    // if (! mongoose.Types.ObjectId.isValid(req.params.id))           // return 404 if invalid id
+    //     return res.status(404).send('Invalid ID');
 
     const genre = await Genres.findById(
         { _id: new ObjectID(req.params.id) },
@@ -105,7 +109,7 @@ router.put('/:id', auth, async (req, res) => {
 });
 
 // delete genre by id
-router.delete('/:id', [auth, admin], async (req, res) => {
+router.delete('/:id', [auth, admin, validateObjectId], async (req, res) => {
 
     const genre = await Genres.findByIdAndRemove({ _id: new ObjectID(req.params.id) });
     if (! genre) return res.status(400).send('That genre ID was not found');

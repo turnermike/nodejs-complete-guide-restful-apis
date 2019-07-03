@@ -53,13 +53,17 @@ Query string parameters used for additional data or optional data to back end se
 ### Unit Testing
 Used when not working with any external resources such as a database or API.
 Confirm that all possible execution paths are tested via Unit test.
+Using Jest.
+[https://jestjs.io/](https://jestjs.io/)
 
 ### Integration Testing
 Test code with external resources.
+Using SuperTest
+[https://github.com/visionmedia/supertest](https://github.com/visionmedia/supertest)
+
 
 ### Unit Testing
-Using Jest.
-[https://jestjs.io/](https://jestjs.io/)
+
 
 ## NPM Packages
 Some notes or referrence for NPM packages used.
