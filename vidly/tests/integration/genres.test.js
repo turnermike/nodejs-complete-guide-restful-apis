@@ -76,7 +76,6 @@ describe('/api/genres', () => {
 
         it('Should return 404 if invalid id is passed.', async () => {
             const id = mongoose.Types.ObjectId();
-            console.log('id', id);
             const res = await request(server).get('/api/genres/' + id);         // make get request with an invalid id (1)
             expect(res.status).toBe(404);                                   // test for 200 response code
             // expect(res.body).toHaveProperty('name', genre.name);            // test for object property 'name' with value of 'genre1'

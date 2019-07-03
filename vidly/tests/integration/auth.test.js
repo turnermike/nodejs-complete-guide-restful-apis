@@ -45,23 +45,23 @@ describe('auth middleware', () => {
 
     });
 
-    // it('Should return 400 if no token is invalid.', async () => {
+    it('Should return 400 if token is invalid.', async () => {
 
-    //     token = 'a';                         // clear token since we're testing an invalid token
+        token = 'a';                         // clear token since we're testing an invalid token
 
-    //     const res = await exec();           // send post request
+        const res = await exec();           // send post request
 
-    //     expect(res.status).toBe(400);       // test expects a 400 response code
+        expect(res.status).toBe(400);       // test expects a 400 response code
 
-    // });
+    });
 
-    // it('Should return 200 if token is valid.', async () => {
+    it('Should return 200 if token is valid.', async () => {
 
-    //     const res = await exec();           // send post request
+        const res = await exec();           // send post request
 
-    //     expect(res.status).toBe(200);       // test expects a 200 response code
+        expect(res.status).toBe(200);       // test expects a 200 response code
 
-    // });
+    });
 
 
 });
