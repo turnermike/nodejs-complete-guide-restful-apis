@@ -73,50 +73,60 @@ describe('/api/genres', () => {
     // insert new genre
     describe('POST /', () => {
 
+
+        let token;
+        let name;
+
+        // define the happy path, and then in each test we change
+        // one parameter that clearly aligns with the name of the test.
+        const exec = async () => {
+            const res = await request(server)                       // send post request
+                .post('/api/genres')                                // post path/url
+                .set('x-auth-token', token)                         // set header key/value
+                .send({ name });                                    // url parameters
+            return res;
+        }
+
+        // runs before each test
+        beforeEach(() => {
+            token = new Users().generateAuthToken(),                // generate JWT
+            name = 'genre1'                                         // default name value
+
+        });
+
         it('Should return 401 if user is not logged in.', async () => {
 
-            const res = await request(server)               // send post request to server with parameters
-                .post('/api/genres')
-                .send({ name: 'genre1' });
+            token = '';                                             // testing a logged out user, unset token
 
-            expect(res.status).toBe(401);                   // test expects a 401 response code
+            const res = await exec();                               // execute post request
+
+            expect(res.status).toBe(401);                           // test expects a 401 response code
 
         });
 
         it('Should return 400 if genre is less than 5 characters', async () => {
 
-            const token = new Users().generateAuthToken();  // generate jwt
+            name = '1234';                                          // testing an invalid name, do not use the default defined above
 
-            const res = await request(server)               // send post request to server with parameters
-                .post('/api/genres')
-                .set('x-auth-token', token)                 // set header key/value
-                .send({ name: '1234' });
+            const res = await exec();                               // execute post request
 
-            expect(res.status).toBe(400);                   // test expects a 400 response code
+            expect(res.status).toBe(400);                           // test expects a 400 response code
 
         });
 
         it('Should return 400 if genre is more than 50 characters', async () => {
 
-            const token = new Users().generateAuthToken();  // generate jwt
+            name = new Array(52).join('a');                         // testing a long name string, generate a 52 char string
 
-            const res = await request(server)               // send post request to server with parameters
-                .post('/api/genres')
-                .set('x-auth-token', token)                 // set header key/value
-                .send({ name: new Array(52).join('a') });   // generate a string of 52 a's
+            const res = await exec();                               // execute post request
 
-            expect(res.status).toBe(400);                   // test expects a 400 response code
+            expect(res.status).toBe(400);                           // test expects a 400 response code
 
         });
 
         it('Should save the genre if it is valid', async () => {
 
-            const token = new Users().generateAuthToken();          // generate jwt
-
-            const res = await request(server)                       // send post request to server with parameters
-                .post('/api/genres')
-                .set('x-auth-token', token)                         // set header key/value
-                .send({ name: 'genre1' });
+            await exec();                                           // execute post request
 
             const genre = await Genres.find({ name: 'genre1' });    // check database for new genre
 
@@ -126,12 +136,7 @@ describe('/api/genres', () => {
 
         it('Should return the genre if it is valid', async () => {
 
-            const token = new Users().generateAuthToken();          // generate jwt
-
-            const res = await request(server)                       // send post request to server with parameters
-                .post('/api/genres')
-                .set('x-auth-token', token)                         // set header key/value
-                .send({ name: 'genre1' });
+            const res = await exec();                               // execute post request
 
             expect(res.body).toHaveProperty('_id');                 // test expects res.body to have an _id property
             expect(res.body).toHaveProperty('name', 'genre1');      // test expects res.body to have a name property with value 'genre1'
