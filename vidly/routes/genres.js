@@ -38,20 +38,26 @@ router.get('/', async (req, res, next) => {
 // get genre by id
 router.get('/:id', validateObjectId, async (req, res) => {
 
-    const genre = await Genres.findById(
-        { _id: new ObjectID(req.params.id) },
-        (err, genre) => {
-            if (err) {
-                debug('Error: \n', err.message);
-                // res.send({ error: err.message });
-                res.status(404).send(`The genre with that ID ('${req.params.id}') does not exist.`);
-                return;
-            }
+  const genre = await Genres.findByIdAndRemove(req.params.id);
 
-            debug('Get genre by ID: \n', genre);
-            res.send(genre);
-        }
-    );
+  if (!genre) return res.status(404).send('The genre with the given ID was not found.');
+
+  res.send(genre);
+
+    // const genre = await Genres.findById(
+    //     { _id: new ObjectID(req.params.id) },
+    //     (err, genre) => {
+    //         if (err) {
+    //             debug('Error: \n', err.message);
+    //             // res.send({ error: err.message });
+    //             res.status(404).send(`The genre with that ID ('${req.params.id}') does not exist.`);
+    //             return;
+    //         }
+
+    //         debug('Get genre by ID: \n', genre);
+    //         res.send(genre);
+    //     }
+    // );
 
 });
 

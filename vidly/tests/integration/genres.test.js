@@ -4,6 +4,7 @@
  *
  */
 
+const mongoose = require('mongoose');
 const request = require('supertest');
 const { Genres } = require('../../models/genres');
 const { Users } = require('../../models/users');
@@ -14,13 +15,25 @@ describe('/api/genres', () => {
 
     // executed before each test
     beforeEach(() => {
+
         server = require('../../index');    // start server before each test
+
     });
 
     // executed after each test
     afterEach(async () => {
+
         server.close();                     // stop express
         await Genres.remove({});            // remove genres table after each test
+
+        // mongoose.connection.db.listCollections({ name: 'genres' })
+        //     .next(function(err, collinfo) {
+        //         if(collinfo) {
+        //             Genres.collection.drop();
+        //         }
+        //     });
+
+
     });
 
     // get all genres
@@ -51,8 +64,10 @@ describe('/api/genres', () => {
 
             const genre = new Genres({ name: 'genre1' });                   // new genre
             await genre.save();                                             // save it to database
+            // console.log('genre', genre);
 
             const res = await request(server).get('/api/genres/' + genre._id);  // make get request with id parameter
+            // console.log('res.body', res.body);
 
             expect(res.status).toBe(200);                                   // test for 200 response code
             expect(res.body).toHaveProperty('name', genre.name);            // test for object property 'name' with value of 'genre1'
@@ -60,9 +75,9 @@ describe('/api/genres', () => {
         });
 
         it('Should return 404 if invalid id is passed.', async () => {
-
-            const res = await request(server).get('/api/genres/1');         // make get request with an invalid id (1)
-
+            const id = mongoose.Types.ObjectId();
+            console.log('id', id);
+            const res = await request(server).get('/api/genres/' + id);         // make get request with an invalid id (1)
             expect(res.status).toBe(404);                                   // test for 200 response code
             // expect(res.body).toHaveProperty('name', genre.name);            // test for object property 'name' with value of 'genre1'
 
