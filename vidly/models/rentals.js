@@ -6,8 +6,8 @@
  */
 
 const mongoose = require('mongoose');
-// const Joi = require('joi');
-// Joi.objectId = require('joi-objectid')(Joi);
+const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
 
 // initialize customers collection schema
 const Rentals = mongoose.model(

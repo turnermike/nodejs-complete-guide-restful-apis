@@ -23,7 +23,7 @@ describe('auth middleware', () => {
     afterEach(async () => {
         // console.log('afterEach called');
         await Genres.remove({});                    // remove genres table after each test
-        server.close();                             // top express
+        await server.close();                             // top express
     });
 
     const exec = async () => {

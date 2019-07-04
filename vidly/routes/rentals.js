@@ -8,6 +8,7 @@
 const { Rentals, validate } = require('../models/rentals');
 const { Movies } = require('../models/movies');
 const { Customers } = require('../models/customers');
+const logger = require('../middleware/logger');
 const express = require('express');
 const mongoose = require('mongoose');
 const Fawn = require('fawn');
@@ -15,7 +16,7 @@ const ObjectID = require('mongodb').ObjectID;
 const debug = require('debug')('app:db');
 const router = express.Router();
 
-Fawn.init(mongoose);
+Fawn.init(mongoose);        // Fawn is used to handle multiple database transactions
 
 /**
  * Routes (/api/rentals)
@@ -69,14 +70,15 @@ router.post('/', async (req, res) => {
 
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
+    debug('error: ', error);
 
     const customer = await Customers.findById(new ObjectID(req.body.customerId));
     if (! customer) return res.status(400).send(error.details[0].message);
-    // console.log('customer', customer);
+    // debug('customer: ' + customer);
 
     const movie = await Movies.findById(new ObjectID(req.body.movieId));
     if (! movie) return res.status(400).send('Invalid movie ID');
-    // console.log('movie', movie);
+    // debug('movie: ' + movie);
 
     if(movie.numberInStock <= 0) return res.status(400).send('Movie not in stock');
 
@@ -93,6 +95,7 @@ router.post('/', async (req, res) => {
             dailyRentalRate: movie.dailyRentalRate
         }
     });
+    // rental.save();
 
     try{
 
@@ -109,13 +112,7 @@ router.post('/', async (req, res) => {
     }
 
 
-    // rental = await rental.save();
-
-    // // adjust inventory
-    // movie.numberInStock--;
-    // movie.save();
-
-    debug('Rental added: \n', rental);
+    logger.info('Rental added:', rental);
     res.send(rental);
 
 });
