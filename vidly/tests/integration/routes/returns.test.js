@@ -9,7 +9,7 @@ const request = require('supertest');
 const { Rentals } = require('../../../models/rentals');
 const { Users } = require('../../../models/users');
 
-describe('/api/returns', () => {
+describe('/api/returns', auth, () => {
 
     let server;
     let customerId;
@@ -94,9 +94,11 @@ describe('/api/returns', () => {
 
     });
 
-    it('Should return 404 if no rental found for customerId/movieId.', () => {
+    it('Should return 404 if no rental found for customerId/movieId.', async () => {
 
+        const res = await exec();
 
+        expect(res.status).toBe(404);
 
     });
 
