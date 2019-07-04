@@ -22,19 +22,17 @@ describe('/api/genres', () => {
 
     // executed after each test
     afterEach(async () => {
+        console.log('afterEach() Called');
 
-
-        await Genres.remove({});            // remove genres table after each test
         server.close();                     // stop express
-
-        // mongoose.connection.db.listCollections({ name: 'genres' })
-        //     .next(function(err, collinfo) {
-        //         if(collinfo) {
-        //             Genres.collection.drop();
-        //         }
-        //     });
+        await Genres.deleteMany({});        // remove genres table after each test
 
 
+    });
+
+    afterAll(async () => {
+        console.log('afterAll() Called');
+        // mongoose.connection.close();
     });
 
     // get all genres

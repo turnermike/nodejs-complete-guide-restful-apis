@@ -5,13 +5,13 @@
   "main": "index.js",
   "jest": {
     "verbose": true,
-    "testPathIgnorePatterns": ["/demo/"],
+    "testPathIgnorePatterns": ["/demo/", "/unit/"],
     "testEnvironment": "node"
   },
   "scripts": {
     "dev": "export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js",
     "dev:test": "concurrently \"export DEBUG=app.startup,app.db && export NODE_ENV=test && nodemon index.js\" \"npm run test\"",
-    "test": "jest",
+    "test": "jest --forceExit --detectOpenHandles",
     "test:watch": "jest --watchAll"
   },
   "keywords": [],
