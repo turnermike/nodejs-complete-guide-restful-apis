@@ -12,6 +12,7 @@
     "dev": "export DEBUG=app.startup,app.db && export NODE_ENV=development && nodemon index.js",
     "dev:test": "concurrently \"export DEBUG=app.startup,app.db && export NODE_ENV=test && nodemon index.js\" \"npm run test\"",
     "test": "jest --forceExit --detectOpenHandles",
+    "test:coverage": "jest --forceExit --detectOpenHandles --coverage && open coverage/lcov-report/index.html",
     "test:watch": "jest --watchAll"
   },
   "keywords": [],
