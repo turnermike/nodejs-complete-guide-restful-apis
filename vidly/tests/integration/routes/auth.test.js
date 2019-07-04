@@ -5,8 +5,8 @@
  */
 
 const request = require('supertest');
-const { Genres } = require('../../models/genres');
-const { Users } = require('../../models/users');
+const { Genres } = require('../../../models/genres');
+const { Users } = require('../../../models/users');
 
 let server;
 let token;
@@ -15,7 +15,7 @@ describe('auth middleware', () => {
 
     // executed before each test
     beforeEach(async () => {
-        server = require('../../index');            // start express
+        server = require('../../../index');            // start express
         token = new Users().generateAuthToken();    // get JWT
     });
 

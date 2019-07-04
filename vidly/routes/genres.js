@@ -89,21 +89,29 @@ router.put('/:id', auth, async (req, res) => {
     const { error } = validate(req.body);
     if (error ) return res.status(400).send(error.details[0].message);
 
-    // find/update
-    try{
-        const genre = await Genres.findByIdAndUpdate(
-            { _id: new ObjectID(req.params.id) },
-            { name: req.body.name },
-            { upsert: true, new: true }
-        );
-        debug('Updated genre: ', genre);
-        res.send(genre);
+    const genre = await Genres.findByIdAndUpdate(req.params.id, { name: req.body.name }, {
+        new: true
+    });
 
-    }
-    catch(err) {
-        debug('Update Genre error: ', err.message);
-        res.send(err.message);
-    }
+    if (!genre) return res.status(404).send('The genre with the given ID was not found.');
+
+    res.send(genre);
+
+    // // find/update
+    // try{
+    //     const genre = await Genres.findByIdAndUpdate(
+    //         { _id: new ObjectID(req.params.id) },
+    //         { name: req.body.name },
+    //         { upsert: true, new: true }
+    //     );
+    //     debug('Updated genre: ', genre);
+    //     res.send(genre);
+
+    // }
+    // catch(err) {
+    //     debug('Update Genre error: ', err.message);
+    //     res.send(err.message);
+    // }
 
 });
 
