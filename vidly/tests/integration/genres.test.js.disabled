@@ -27,7 +27,6 @@ describe('/api/genres', () => {
         server.close();                     // stop express
         await Genres.deleteMany({});        // remove genres table after each test
 
-
     });
 
     afterAll(async () => {
