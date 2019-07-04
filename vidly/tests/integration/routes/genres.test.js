@@ -240,4 +240,78 @@ describe('/api/genres', () => {
 
     });
 
+    // delete a genre
+    describe('DELETE /:id', () => {
+
+        let token;
+        let genre;
+        let id;
+
+        const exec = async () => {
+          return await request(server)
+            .delete('/api/genres/' + id)
+            .set('x-auth-token', token)
+            .send();
+        }
+
+        beforeEach(async () => {
+          // Before each test we need to create a genre and
+          // put it in the database.
+          genre = new Genres({ name: 'genre1' });
+          await genre.save();
+
+          id = genre._id;
+          token = new Users({ isAdmin: true }).generateAuthToken();
+        })
+
+        it('should return 401 if client is not logged in', async () => {
+          token = '';
+
+          const res = await exec();
+
+          expect(res.status).toBe(401);
+        });
+
+        it('should return 403 if the user is not an admin', async () => {
+          token = new Users({ isAdmin: false }).generateAuthToken();
+
+          const res = await exec();
+
+          expect(res.status).toBe(403);
+        });
+
+        it('should return 404 if id is invalid', async () => {
+          // id = 1;
+          id = new ObjectID(1);
+
+          const res = await exec();
+
+          expect(res.status).toBe(404);
+        });
+
+        it('should return 404 if no genre with the given id was found', async () => {
+          id = mongoose.Types.ObjectId();
+
+          const res = await exec();
+
+          expect(res.status).toBe(404);
+        });
+
+        it('should delete the genre if input is valid', async () => {
+          await exec();
+
+          const genreInDb = await Genres.findById(id);
+
+          expect(genreInDb).toBeNull();
+        });
+
+        it('should return the removed genre', async () => {
+          const res = await exec();
+
+          expect(res.body).toHaveProperty('_id', genre._id.toHexString());
+          expect(res.body).toHaveProperty('name', genre.name);
+        });
+
+    });
+
 });

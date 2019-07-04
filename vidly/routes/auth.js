@@ -52,7 +52,8 @@ router.post('/', async (req, res) => {
     const token = user.generateAuthToken();
 
     // res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email', 'isAdmin']));           // use _.pick to select with properties to send
-    res.header('x-auth-token', token).send(token);
+    // res.header('x-auth-token', token).send(token);
+    res.send(token);
     // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDEyNzY2YTc5NTgzODBkZmE5NWQzYmIiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE1NjE2NDgzNTN9.JjU67jcZDm5GU8rDhCH2nuRo3nXdBysD2QAg8cxEuqw
 
 });

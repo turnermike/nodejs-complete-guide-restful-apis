@@ -11,10 +11,10 @@ const admin = require('../middleware/admin');
 const logger = require('../middleware/logger');
 const validateObjectId = require('../middleware/validateObjectId');
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectID;
 const debug = require('debug')('app:db');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 
 const router = express.Router();
 
@@ -119,9 +119,9 @@ router.put('/:id', auth, async (req, res) => {
 router.delete('/:id', [auth, admin, validateObjectId], async (req, res) => {
 
     const genre = await Genres.findByIdAndRemove({ _id: new ObjectID(req.params.id) });
-    if (! genre) return res.status(400).send('That genre ID was not found');
+    if (! genre) return res.status(404).send('That genre ID was not found');
 
-    debug('Deleted genre: ', genre);
+    logger.info('Deleted genre.');
     res.send(genre);
 
 });
