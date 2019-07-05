@@ -13,7 +13,7 @@ module.exports = function() {
 
     // connect to mongodb
     mongoose.connect(config.get('mongodb'), { useNewUrlParser: true, useFindAndModify: false })
-        .then( () => logger.info(`Connected to MongoDB: ${config.get('mongodb')}`))
+        .then( () => logger.info(/*`Connected to MongoDB: ${config.get('mongodb')}`*/))
         // .catch(err => debug('Error: ', err));
     mongoose.set('useCreateIndex', true);
 

@@ -19,7 +19,7 @@ app.set('views', './views');                        // template location (views 
 
 // start server
 const port = process.env.PORT || 3000;
-const server = app.listen(port, () => { logger.info(`Listening on port ${port}`) });
+const server = app.listen(port, () => { /*logger.info(`Listening on port ${port}`)*/ });
 
 module.exports = server;
 
