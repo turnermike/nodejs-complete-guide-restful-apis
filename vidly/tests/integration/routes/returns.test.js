@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 const request = require('supertest');
 const { Rentals } = require('../../../models/rentals');
 const { Users } = require('../../../models/users');
+const logger = require('../../../middleware/logger');
+const debug = require('debug')('app:db');    // doesn't work here
 
 describe('/api/returns', () => {
 
@@ -101,6 +103,49 @@ describe('/api/returns', () => {
         const res = await exec();
 
         expect(res.status).toBe(404);
+
+    });
+
+    it('Should return 400 if return has already been processed.', async () => {
+
+        rental.dateReturned = new Date();
+        await rental.save();
+
+        const res = await exec();
+
+        expect(res.status).toBe(400);
+
+    });
+
+    it('Should set the return date if input is valid.', async () => {
+
+        const res = await exec();
+
+        const rentalInDb = await Rentals.findById(rental._id);
+
+        const diff = new Date() - rentalInDb.dateReturned;
+
+        // expect(rentalInDb.dateReturned).toBeDefined();
+        expect(diff).toBeLessThan(10 * 1000);
+
+
+    });
+
+    it('Should calculate the rental fee.', async () => {
+
+        const res = await exec();
+
+        const rentalInDb = await Rentals.findById(rental._id);
+
+        const daysOut = rentalInDb.dateReturned - rentalInDb.dateOut;
+        const fee = daysOut * rentalInDb.movie.dailyRentalRate;
+
+        console.log('daysOut: ', daysOut);
+        console.log('fee: ', fee);
+        logger.info('Fee: ' + fee);
+        // debug('THIS IS A TEST');
+
+        expect(fee).toBeGreaterThan(0);
 
     });
 
