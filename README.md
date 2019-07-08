@@ -61,7 +61,6 @@ Test code with external resources.
 Using SuperTest
 [https://github.com/visionmedia/supertest](https://github.com/visionmedia/supertest)
 
-
 ### Unit Testing
 
 
@@ -88,6 +87,11 @@ A promise based library for transactions in MongoDB
 Since this tutorial, transactions have been added to MongoDB as per Fawn README.
 
 The library creates a database collection named `ojlinttaskcollections` to run the phase 2 commits.
+
+
+## Heroku Deployments
+
+My application name: fast-depths-81376
 
 
 ## Response Codes
