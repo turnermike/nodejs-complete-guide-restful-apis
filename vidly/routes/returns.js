@@ -18,9 +18,7 @@ const Joi = require('joi');
 const router = express.Router();
 
 
-// router.post('/', [auth, validate(validateReturn)], async (req, res) => {
-router.post('/', auth, async (req, res) => {
-
+router.post('/', [auth, validate(validateReturn)], async (req, res) => {
 
     try{
 
@@ -32,9 +30,11 @@ router.post('/', auth, async (req, res) => {
         if (! req.body.movieId)
             return res.status(400).send('Movie ID not provided.');
 
+        // using static method in model, (models/rentals.js)
         const rental = await Rentals.lookup(req.body.customerId, req.body.movieId);
-        logger.info('rental: ' + JSON.stringify(rental));
+        // logger.info('rental: ' + JSON.stringify(rental));
 
+        // refactored this on line above with static method
         // const rental = await Rentals.findOne({
         //     'customer._id': req.body.customerId,
         //     'movie._id': req.body.movieId
@@ -47,24 +47,17 @@ router.post('/', auth, async (req, res) => {
         if (rental.dateReturned) return res.status(400).send('Return has already been processed.');
 
         // calculate fee
-        const diffTime = Math.abs(rental.dateOut.getTime() - new Date().getTime());
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        debug('diffTime', diffTime);
-        debug('diffDays', diffDays);
-        debug('rental.movie.dailyRentalRate', rental.movie.dailyRentalRate);
-
-        const fee = diffDays * rental.movie.dailyRentalRate;
-        debug('fee', fee);
+        // suing instance method in model (models/rentals.js)
+        rental.return();
 
         rental.dateReturned = new Date();
-        rental.rentalFee = fee;
         await rental.save();
 
         await Movies.update({ _id: rental.movie._id }, {
             $inc: { numberInStock: 1 }
         });
 
-        res.status(200).send(rental);
+        res.send(rental);
 
     }
     catch(ex) {

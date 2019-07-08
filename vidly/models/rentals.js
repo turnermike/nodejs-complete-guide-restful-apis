@@ -66,13 +66,27 @@ const rentalsSchema = new mongoose.Schema({
 });
 
 
-
+// static method
 rentalsSchema.statics.lookup = function(customerId, movieId) {
 
     return this.findOne({
         'customer._id': customerId,
         'movie._id': movieId
     });
+
+}
+
+// instance method
+rentalsSchema.methods.return = function() {
+
+    const diffTime = Math.abs(this.dateOut.getTime() - new Date().getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const fee = diffDays * this.movie.dailyRentalRate;
+    this.rentalFee = fee;
+    // debug('diffTime', diffTime);
+    // debug('diffDays', diffDays);
+    // debug('this.movie.dailyRentalRate', this.movie.dailyRentalRate);
+    // debug('fee', fee);
 
 }
 
