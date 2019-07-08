@@ -1,5 +1,5 @@
 *.DS_Store
-assets/
+_assets/
 */node_modules/*
 *.log
 vidly/coverage/
