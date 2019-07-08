@@ -5,6 +5,7 @@ const logger = require('./middleware/logger');      // initialize winston middle
 
 const app = express();                              // initialize express
 
+require('./startup/prod')(app);                     // load production environment specific modules
 require('./startup/logging')(app);                  // initialize error logging
 require('./startup/config')();                        // initialize config options
 require('./startup/routes')(app);                   // load routes
@@ -19,7 +20,7 @@ app.set('views', './views');                        // template location (views 
 
 // start server
 const port = process.env.PORT || 3000;
-const server = app.listen(port, () => { /*logger.info(`Listening on port ${port}`)*/ });
+const server = app.listen(port, () => { logger.info(`Listening on port ${port}`) });
 
 module.exports = server;
 

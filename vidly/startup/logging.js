@@ -14,7 +14,7 @@
 
 require('express-async-errors');
 const logger = require('../middleware/logger');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const config = require('config');
 const debug = require('debug')('app:startup');      // requires env var: export DEBUG=app:startup,app:db
 
@@ -46,10 +46,10 @@ module.exports = function(app) {
         throw ex;
     });
 
-    // use morgan http request logger for development only
-    if (app.get('env') === 'development'){
-        app.use(morgan('tiny'));                        // logs requests to terminal
-        logger.info('Morgan enabled...');
-    }
+    // // use morgan http request logger for development only
+    // if (app.get('env') === 'development'){
+    //     app.use(morgan('tiny'));                        // logs requests to terminal
+    //     logger.info('Morgan enabled...');
+    // }
 
 }
