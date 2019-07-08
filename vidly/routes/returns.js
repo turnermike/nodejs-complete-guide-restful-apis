@@ -13,6 +13,7 @@ const express = require('express');
 // const mongoose = require('mongoose');
 const debug = require('debug')('app:db');
 const util = require('util');
+const Joi = require('joi');
 const router = express.Router();
 
 
@@ -23,11 +24,15 @@ router.post('/', auth, async (req, res) => {
 
         // logger.info("customerId: " + req.body.customerId);
 
-        if (! req.body.customerId)
-            return res.status(400).send('Customer ID not provided.');
+        // if (! req.body.customerId)
+        //     return res.status(400).send('Customer ID not provided.');
 
-        if (! req.body.movieId)
-            return res.status(400).send('Movie ID not provided.');
+        // if (! req.body.movieId)
+        //     return res.status(400).send('Movie ID not provided.');
+
+        // validate
+        const { error } = validateReturn(req.body);
+        if (error ) return res.status(400).send(error.details[0].message);
 
         const rental = await Rentals.findOne({
             'customer._id': req.body.customerId,
@@ -76,5 +81,17 @@ router.post('/', auth, async (req, res) => {
 
 
 });
+
+// validation
+function validateReturn(req) {
+
+    const schema = {
+        customerId: Joi.objectId().required(),
+        movieId: Joi.objectId().required()
+    };
+
+    return Joi.validate(req, schema);
+
+}
 
 module.exports = router;

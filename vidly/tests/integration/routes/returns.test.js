@@ -173,16 +173,16 @@ describe('/api/returns', () => {
 
         const rentalInDb = await Rentals.findById(rental._id);
 
-        logger.debug(JSON.stringify(res.body));
+        // logger.debug(JSON.stringify(res.body));
 
         // expect(res.body).toHaveProperty('dateOut');
         // expect(res.body).toHaveProperty('dateReturned');
-        // // expect(res.body).toHaveProperty('rentalFee');
+        // expect(res.body).toHaveProperty('rentalFee');
         // expect(res.body).toHaveProperty('customer');
         // expect(res.body).toHaveProperty('movie');
 
         expect(Object.keys(res.body)).toEqual(
-            expect.arrayContaining(['dateOut', 'dateReturned', 'customer', 'movie'])
+            expect.arrayContaining(['dateOut', 'dateReturned', 'customer', 'movie', 'rentalFee'])
         );
 
     });
