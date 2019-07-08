@@ -61,7 +61,7 @@ router.get('/:id', async (req, res) => {
 /**
  * Add new rental
  *
- * - inserts a sub document for the genre field
+ * - retals documents contain a sub document for customer and for movie
  * - using Fawn to handle multiple transactions:
  * https://github.com/e-oj/Fawn
  *

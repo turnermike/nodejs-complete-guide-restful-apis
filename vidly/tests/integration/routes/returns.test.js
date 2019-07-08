@@ -60,7 +60,8 @@ describe('/api/returns', () => {
     afterEach(async () => {
 
         server.close();                     // stop express
-        await Rentals.deleteMany({});       // clear db table
+        await Rentals.deleteMany({});       // clear the rentals table
+        await Movies.deleteMany({});        // clear the movies table
 
     });
 
@@ -164,6 +165,25 @@ describe('/api/returns', () => {
         const movieInDb = await Movies.findById(movieId);
         expect(movieInDb.numberInStock).toBe(movie.numberInStock + 1);
 
+    });
+
+    it('Should return the rental if input is valid.', async () => {
+
+        const res = await exec();
+
+        const rentalInDb = await Rentals.findById(rental._id);
+
+        logger.debug(JSON.stringify(res.body));
+
+        // expect(res.body).toHaveProperty('dateOut');
+        // expect(res.body).toHaveProperty('dateReturned');
+        // // expect(res.body).toHaveProperty('rentalFee');
+        // expect(res.body).toHaveProperty('customer');
+        // expect(res.body).toHaveProperty('movie');
+
+        expect(Object.keys(res.body)).toEqual(
+            expect.arrayContaining(['dateOut', 'dateReturned', 'customer', 'movie'])
+        );
 
     });
 

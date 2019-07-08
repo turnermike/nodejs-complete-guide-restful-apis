@@ -40,15 +40,29 @@ router.post('/', auth, async (req, res) => {
 
         if (rental.dateReturned) return res.status(400).send('Return has already been processed.');
 
+        // calculate fee
+        // const daysOut = rental.dateReturned - rental.dateOut;
+        // const daysOut = new Date() - rental.dateOut;
+
+        const diffTime = Math.abs(rental.dateOut.getTime() - new Date().getTime());
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        debug('diffTime', diffTime);
+        debug('diffDays', diffDays);
+        debug('rental.movie.dailyRentalRate', rental.movie.dailyRentalRate);
+
+        const fee = diffDays * rental.movie.dailyRentalRate;
+        debug('fee', fee);
+
         rental.dateReturned = new Date();
+        rental.rentalFee = fee;
         await rental.save();
 
         await Movies.update({ _id: rental.movie._id }, {
             $inc: { numberInStock: 1 }
         });
 
-        res.status(200).send('Valid response');
-
+        res.status(200).send(rental);
+        // res.status(200).send('Valid response');
         // res.status(401).send('Unauthorized');/
 
 
