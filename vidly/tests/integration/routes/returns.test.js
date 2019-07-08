@@ -7,6 +7,7 @@
 const mongoose = require('mongoose');
 const request = require('supertest');
 const { Rentals } = require('../../../models/rentals');
+const { Movies } = require('../../../models/movies');
 const { Users } = require('../../../models/users');
 const logger = require('../../../middleware/logger');
 const debug = require('debug')('app:db');    // doesn't work here
@@ -17,6 +18,7 @@ describe('/api/returns', () => {
     let customerId;
     let movieId;
     let rental;
+    let movie;
     let token;
 
     // executed before each test
@@ -27,6 +29,15 @@ describe('/api/returns', () => {
         customerId = mongoose.Types.ObjectId();
         movieId = mongoose.Types.ObjectId();
         token = new Users().generateAuthToken();
+
+        movie = new Movies({
+            _id: movieId,
+            title: '12345',
+            dailyRentalRate: 2,
+            genre: { name: '12345' },
+            numberInStock: 10
+        });
+        await movie.save();
 
         rental = new Rentals({
             customer: {
@@ -41,7 +52,6 @@ describe('/api/returns', () => {
 
             }
         });
-
         await rental.save();
 
     });
@@ -128,7 +138,6 @@ describe('/api/returns', () => {
         // expect(rentalInDb.dateReturned).toBeDefined();
         expect(diff).toBeLessThan(10 * 1000);
 
-
     });
 
     it('Should calculate the rental fee.', async () => {
@@ -140,12 +149,21 @@ describe('/api/returns', () => {
         const daysOut = rentalInDb.dateReturned - rentalInDb.dateOut;
         const fee = daysOut * rentalInDb.movie.dailyRentalRate;
 
-        console.log('daysOut: ', daysOut);
-        console.log('fee: ', fee);
+        // console.log('daysOut: ', daysOut);
+        // console.log('fee: ', fee);
         logger.info('Fee: ' + fee);
-        // debug('THIS IS A TEST');
 
         expect(fee).toBeGreaterThan(0);
+
+    });
+
+    it('Should increase the movie inventory if input is valid.', async () => {
+
+        const res = await exec();
+
+        const movieInDb = await Movies.findById(movieId);
+        expect(movieInDb.numberInStock).toBe(movie.numberInStock + 1);
+
 
     });
 

@@ -5,7 +5,7 @@
  */
 
 const { Rentals, validate } = require('../models/rentals');
-// const { Movies } = require('../models/movies');
+const { Movies } = require('../models/movies');
 // const { Customers } = require('../models/customers');
 const auth = require('../middleware/auth');
 const logger = require('../middleware/logger');
@@ -42,6 +42,10 @@ router.post('/', auth, async (req, res) => {
 
         rental.dateReturned = new Date();
         await rental.save();
+
+        await Movies.update({ _id: rental.movie._id }, {
+            $inc: { numberInStock: 1 }
+        });
 
         res.status(200).send('Valid response');
 
