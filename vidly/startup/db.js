@@ -11,9 +11,11 @@ const logger = require('../middleware/logger');
 
 module.exports = function() {
 
+    const connStr = (process.env.NODE_ENV === 'production') ? process.env.mongodb : config.get('mongodb');
+
     // connect to mongodb
-    mongoose.connect(config.get('mongodb'), { useNewUrlParser: true, useFindAndModify: false })
-        .then( () => logger.info(`Connected to MongoDB: ${config.get('mongodb')}`))
+    mongoose.connect(connStr, { useNewUrlParser: true, useFindAndModify: false })
+        .then( () => logger.info(`Connected to MongoDB: ${connStr}`))
         // .catch(err => debug('Error: ', err));
     mongoose.set('useCreateIndex', true);
 
