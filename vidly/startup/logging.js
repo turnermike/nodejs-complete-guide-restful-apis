@@ -20,7 +20,7 @@ const debug = require('debug')('app:startup');      // requires env var: export 
 
 module.exports = function(app) {
 
-    const devEnvs = ['development', 'test'];
+    const devEnvs = ['development', 'test', 'production'];
 
     // output app info
     if(devEnvs.includes(app.get('env'))) {
