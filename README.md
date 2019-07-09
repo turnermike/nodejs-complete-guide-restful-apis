@@ -61,8 +61,6 @@ Test code with external resources.
 Using SuperTest
 [https://github.com/visionmedia/supertest](https://github.com/visionmedia/supertest)
 
-### Unit Testing
-
 
 ## NPM Packages
 Some notes or referrence for NPM packages used.
@@ -91,7 +89,11 @@ The library creates a database collection named `ojlinttaskcollections` to run t
 
 ## Heroku Deployments
 
-My application name: fast-depths-81376
+Application name: fast-depths-81376
+Domain: fast-depths-81376.herokuapp.com
+
+Deploy a subdirectory (following will deploy the vidly dir):
+`git subtree push --prefix vidly heroku master`
 
 
 ## Response Codes
