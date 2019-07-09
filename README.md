@@ -9,6 +9,15 @@ mentioned in the begining of the tutorial. Here's someones repo for that codebas
 Some other student's repo:
 [https://github.com/Devansh4/nodeCourse](https://github.com/Devansh4/nodeCourse)
 
+
+## MongoDB
+Development/Local connection string:
+`mongodb://localhost/node-restful-api`
+
+Staging connection string:
+`mongodb+srv://mike:NxjUgTIqbZwJsK7LIoaBs@emaily-bpjar.mongodb.net/vidly?retryWrites=true`
+
+
 ## Environment Variables
 
 ### NODE_ENV
