@@ -25,11 +25,11 @@ module.exports = function(app) {
     // output app info
     if(devEnvs.includes(app.get('env'))) {
     // if (app.get('env') === 'development') {
-        debug(`Application Name: ${config.get('name')}`);
-        debug(`MongoDB URL: ${config.get('mongodb')}`);
-        debug(`jwtPrivateKey: ${config.get('jwtPrivateKey')}`);
-        debug(`NODE_ENV: ${process.env.NODE_ENV}`);
-        debug('app.get("env"):', app.get('env'));
+        logger.info(`Application Name: ${config.get('name')}`);
+        logger.info(`MongoDB URL: ${config.get('mongodb')}`);
+        logger.info(`jwtPrivateKey: ${config.get('jwtPrivateKey')}`);
+        logger.info(`NODE_ENV: ${process.env.NODE_ENV}`);
+        logger.info('app.get("env"):', app.get('env'));
     }
 
     // log any express uncaught exceptions
