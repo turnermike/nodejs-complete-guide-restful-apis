@@ -21,12 +21,13 @@ const debug = require('debug')('app:startup');      // requires env var: export 
 module.exports = function(app) {
 
     const devEnvs = ['development', 'test', 'production'];
+    const connStr = (process.env.NODE_ENV === 'production') ? process.env.mongodb : config.get('mongodb');
 
     // output app info
     if(devEnvs.includes(app.get('env'))) {
     // if (app.get('env') === 'development') {
         logger.info(`Application Name: ${config.get('name')}`);
-        logger.info(`MongoDB URL: ${config.get('mongodb')}`);
+        logger.info(`MongoDB URL: ${connStr}`);
         logger.info(`jwtPrivateKey: ${config.get('jwtPrivateKey')}`);
         logger.info(`NODE_ENV: ${process.env.NODE_ENV}`);
         logger.info('app.get("env"):', app.get('env'));
