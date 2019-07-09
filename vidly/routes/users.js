@@ -31,6 +31,7 @@ router.get('/me', auth, async (req, res) => {
     const user = await Users.findById(req.user._id).select('-password');
     logger.info('CURRENT USER: ' + user);
     // debug('CURRENT USER: ' + user);
+
     res.send(user);
 
 });
