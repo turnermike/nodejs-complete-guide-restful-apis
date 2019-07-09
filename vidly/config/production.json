@@ -3,6 +3,6 @@
     "mongodb": "",
     "jwtPrivateKey": "vidly_jwtPrivateKey",
     "errorLogToFile": true,
-    "errorLogToDB": true,
+    "errorLogToDB": false,
     "errorLogToConsole": true
 }
