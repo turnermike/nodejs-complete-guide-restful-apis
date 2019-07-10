@@ -3,3 +3,4 @@ _assets/
 */node_modules/*
 *.log
 vidly/coverage/
+db_dumps/
