@@ -1,6 +1,4 @@
-/**
- * routes/movies.js
- *
+/** * routes/movies.js *
  * - handle all /api/movies routes (loaded via index.js with path prefix)
  *
  */

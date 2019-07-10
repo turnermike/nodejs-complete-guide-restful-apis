@@ -101,7 +101,6 @@ router.put('/:id', auth, async (req, res) => {
         res.send(err.message);
     }
 
-
 });
 
 // delete customer by id
