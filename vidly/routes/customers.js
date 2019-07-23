@@ -1,4 +1,4 @@
-/**
+
  * routes/customers.js
  *
  * - handle all /api/customers routes (loaded via index.js with path prefix)
